@@ -12,9 +12,13 @@
 		370606DC1ED13F18001289C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370606DA1ED13F18001289C9 /* Main.storyboard */; };
 		370606DE1ED13F18001289C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370606DD1ED13F18001289C9 /* Assets.xcassets */; };
 		370606E11ED13F18001289C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370606DF1ED13F18001289C9 /* LaunchScreen.storyboard */; };
+		3755250F1EFE8FB200994322 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755250E1EFE8FB200994322 /* TabbarVC.swift */; };
+		375525111EFE904800994322 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375525101EFE904800994322 /* Tabbar.swift */; };
+		FA011B85137B7F50693A5F1D /* Pods_Nolza.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1380F1DDF43D286F1BDD15C /* Pods_Nolza.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07EBDC2409ABAF9685E01957 /* Pods-Nolza.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolza.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nolza/Pods-Nolza.release.xcconfig"; sourceTree = "<group>"; };
 		370606D31ED13F18001289C9 /* Nolza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nolza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		370606D61ED13F18001289C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		370606D81ED13F18001289C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,10 @@
 		370606DD1ED13F18001289C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		370606E01ED13F18001289C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		370606E21ED13F18001289C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3755250E1EFE8FB200994322 /* TabbarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
+		375525101EFE904800994322 /* Tabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		7ED443419796E97BB0CB2E6A /* Pods-Nolza.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolza.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nolza/Pods-Nolza.debug.xcconfig"; sourceTree = "<group>"; };
+		A1380F1DDF43D286F1BDD15C /* Pods_Nolza.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nolza.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA011B85137B7F50693A5F1D /* Pods_Nolza.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32A86B419964D1081AC54077 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7ED443419796E97BB0CB2E6A /* Pods-Nolza.debug.xcconfig */,
+				07EBDC2409ABAF9685E01957 /* Pods-Nolza.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		370606CA1ED13F18001289C9 = {
 			isa = PBXGroup;
 			children = (
 				370606D51ED13F18001289C9 /* Nolza */,
 				370606D41ED13F18001289C9 /* Products */,
+				32A86B419964D1081AC54077 /* Pods */,
+				B62448C3DB5F460870FC28E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +74,9 @@
 		370606D51ED13F18001289C9 /* Nolza */ = {
 			isa = PBXGroup;
 			children = (
+				375525141EFE90FD00994322 /* Login */,
+				375525131EFE90F100994322 /* InitialSetting */,
+				375525121EFE90D600994322 /* TabbarSetting */,
 				370606D61ED13F18001289C9 /* AppDelegate.swift */,
 				370606D81ED13F18001289C9 /* ViewController.swift */,
 				370606DA1ED13F18001289C9 /* Main.storyboard */,
@@ -64,6 +87,37 @@
 			path = Nolza;
 			sourceTree = "<group>";
 		};
+		375525121EFE90D600994322 /* TabbarSetting */ = {
+			isa = PBXGroup;
+			children = (
+				3755250E1EFE8FB200994322 /* TabbarVC.swift */,
+				375525101EFE904800994322 /* Tabbar.swift */,
+			);
+			name = TabbarSetting;
+			sourceTree = "<group>";
+		};
+		375525131EFE90F100994322 /* InitialSetting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = InitialSetting;
+			sourceTree = "<group>";
+		};
+		375525141EFE90FD00994322 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		B62448C3DB5F460870FC28E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1380F1DDF43D286F1BDD15C /* Pods_Nolza.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 370606E51ED13F18001289C9 /* Build configuration list for PBXNativeTarget "Nolza" */;
 			buildPhases = (
+				D1028ADFCD823F7587EEE454 /* [CP] Check Pods Manifest.lock */,
 				370606CF1ED13F18001289C9 /* Sources */,
 				370606D01ED13F18001289C9 /* Frameworks */,
 				370606D11ED13F18001289C9 /* Resources */,
+				84F52B8FE3193AC9B31374B1 /* [CP] Embed Pods Frameworks */,
+				CBC706027CFF0ECC2153583C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +189,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		84F52B8FE3193AC9B31374B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nolza/Pods-Nolza-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBC706027CFF0ECC2153583C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nolza/Pods-Nolza-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1028ADFCD823F7587EEE454 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		370606CF1ED13F18001289C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +244,8 @@
 			files = (
 				370606D91ED13F18001289C9 /* ViewController.swift in Sources */,
 				370606D71ED13F18001289C9 /* AppDelegate.swift in Sources */,
+				3755250F1EFE8FB200994322 /* TabbarVC.swift in Sources */,
+				375525111EFE904800994322 /* Tabbar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +364,7 @@
 		};
 		370606E61ED13F18001289C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ED443419796E97BB0CB2E6A /* Pods-Nolza.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 537GQ2WKJ4;
@@ -270,6 +378,7 @@
 		};
 		370606E71ED13F18001289C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07EBDC2409ABAF9685E01957 /* Pods-Nolza.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 537GQ2WKJ4;
@@ -300,6 +409,7 @@
 				370606E71ED13F18001289C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1728C3E869FCE6E9F7BD52EC01DCB955 /* Pods-Nolza-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F518C57103019EA3BD795C54C1B90814 /* Pods-Nolza-dummy.m */; };
+		2FFAD5A86DE7CE99367722E237B68647 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		3CC6EA0662AE2BF56D61D617B3CE77E8 /* DORM-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E650B4342514FDD123177123753E357 /* DORM-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49188334865B583EAB177F6C8A87826E /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4970DC728BB0BA52955D8ABBBBC5F0 /* UITextField+Extension.swift */; };
+		4CE00EAE977E4C71C0BE69CD8CAA9BA7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C343AE1A7054D0BC2FEC903F81D2573 /* UIView+Extension.swift */; };
+		62C0B1665CC509E63EF882764F1563E9 /* Pods-Nolza-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DEFCB78C585EC0C9BD30F1322E03C3CB /* Pods-Nolza-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		712E7933B5DFBB00B46337B221013D92 /* WaterMarkUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2482167857474DB40E98134E74F50DFA /* WaterMarkUtil.swift */; };
+		7C75A752A7D43B0EB62A237713F2B26C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692208D14BC768E91DAC96C56E16B294 /* UIColor+Extension.swift */; };
+		9387E264A3BFE4AC904D8D2BABDE55C4 /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D924138400B52ABB3862AA00B7ABA5 /* iOSDevCenters+GIF.swift */; };
+		93F9855C4E67B6C28777D5986B129ADD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		A08487FFE693E9AB37351A2CE8833F34 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6CC3B57F021818091ACB0F1137F9A3 /* UIButton+Extension.swift */; };
+		A334DFB10048CC9124B13FC03CF27004 /* DeviceResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36432101809DCF0E17044D8C2FE3AD1F /* DeviceResize.swift */; };
+		B5569C30F617AEB479E2B7779FF27DFA /* UITabBarController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF7638DD5071FB75A6C42CB2D2363EC /* UITabBarController+Extension.swift */; };
+		D3ED31ABDC1618D6219A4297E7B6D77F /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D83D9AC2E7A643F039A22FA71F7CEC7 /* UILabel+Extension.swift */; };
+		D52F0A0050845AC0477BE015F4A65096 /* InstagramManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDD0E0A3389342DDBC9EE1AE3DFB66A /* InstagramManager.swift */; };
+		D8DE93C53D603A4B816F025DFAC8ACE2 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC23DD4EB1BA38B65A229540599AA50 /* UINavigationController+Extension.swift */; };
+		E2989BAE9F80FC4AAB0ECC3E60AB1EA7 /* DORM-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B9096683FD2610C6F5EE9AC4F1E2BE /* DORM-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4914FDD92CFA9D2BBA29B1447622D233 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4524A2B94042EA234D78421E05FA8DB;
+			remoteInfo = DORM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E3421D9BD8DA81A0097C58169E8FBA3 /* Pods-Nolza-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Nolza-frameworks.sh"; sourceTree = "<group>"; };
+		1AC23DD4EB1BA38B65A229540599AA50 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Extension.swift"; path = "DORM/Classes/UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		1B32843349C1F64B4E7D479D5459E57F /* Pods-Nolza.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Nolza.release.xcconfig"; sourceTree = "<group>"; };
+		1B54DC17359E44C457BAF24F56AD5878 /* Pods-Nolza-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Nolza-acknowledgements.plist"; sourceTree = "<group>"; };
+		2482167857474DB40E98134E74F50DFA /* WaterMarkUtil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WaterMarkUtil.swift; path = DORM/Classes/WaterMarkUtil.swift; sourceTree = "<group>"; };
+		283BB37AE7402687A56FE925011BC9FD /* Pods-Nolza.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Nolza.debug.xcconfig"; sourceTree = "<group>"; };
+		2D83D9AC2E7A643F039A22FA71F7CEC7 /* UILabel+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+Extension.swift"; path = "DORM/Classes/UILabel+Extension.swift"; sourceTree = "<group>"; };
+		2E650B4342514FDD123177123753E357 /* DORM-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DORM-umbrella.h"; sourceTree = "<group>"; };
+		36432101809DCF0E17044D8C2FE3AD1F /* DeviceResize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeviceResize.swift; path = DORM/Classes/DeviceResize.swift; sourceTree = "<group>"; };
+		3B7EC58A7859DD81708DC214EC4F9E61 /* DORM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DORM.framework; path = DORM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B6CC3B57F021818091ACB0F1137F9A3 /* UIButton+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Extension.swift"; path = "DORM/Classes/UIButton+Extension.swift"; sourceTree = "<group>"; };
+		51F4C02322CE0A67AF041A02C2067ADD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55D924138400B52ABB3862AA00B7ABA5 /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "iOSDevCenters+GIF.swift"; path = "DORM/Classes/iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
+		5C343AE1A7054D0BC2FEC903F81D2573 /* UIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "DORM/Classes/UIView+Extension.swift"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		692208D14BC768E91DAC96C56E16B294 /* UIColor+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "DORM/Classes/UIColor+Extension.swift"; sourceTree = "<group>"; };
+		6D4970DC728BB0BA52955D8ABBBBC5F0 /* UITextField+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+Extension.swift"; path = "DORM/Classes/UITextField+Extension.swift"; sourceTree = "<group>"; };
+		6E4E97A40579903F7415817E95FCA340 /* DORM-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DORM-prefix.pch"; sourceTree = "<group>"; };
+		6FDD0E0A3389342DDBC9EE1AE3DFB66A /* InstagramManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InstagramManager.swift; path = DORM/Classes/InstagramManager.swift; sourceTree = "<group>"; };
+		7CD15832D52B1C16B7BBED269E28E067 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B7E0EA1A45C5D4671BFBEDE1B784DF8 /* DORM.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DORM.modulemap; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A7B9096683FD2610C6F5EE9AC4F1E2BE /* DORM-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DORM-dummy.m"; sourceTree = "<group>"; };
+		D7390B4FA496E10D7EB8869C5F09D221 /* Pods-Nolza-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Nolza-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DEFCB78C585EC0C9BD30F1322E03C3CB /* Pods-Nolza-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Nolza-umbrella.h"; sourceTree = "<group>"; };
+		E2EB5D0856C3B9C123896AB2DD9D7ED2 /* DORM.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DORM.xcconfig; sourceTree = "<group>"; };
+		EB11AE605DA400B58C109777E0D29561 /* Pods-Nolza-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Nolza-resources.sh"; sourceTree = "<group>"; };
+		F518C57103019EA3BD795C54C1B90814 /* Pods-Nolza-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Nolza-dummy.m"; sourceTree = "<group>"; };
+		FB6C239CC8FA96AA15C744D4FD8D01BB /* Pods_Nolza.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Nolza.framework; path = "Pods-Nolza.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBF7638DD5071FB75A6C42CB2D2363EC /* UITabBarController+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITabBarController+Extension.swift"; path = "DORM/Classes/UITabBarController+Extension.swift"; sourceTree = "<group>"; };
+		FC4EB1B6837C6EB793D0BB1B150C9CE7 /* Pods-Nolza.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Nolza.modulemap"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04B4BDC0F03A7D15BEC6776C9827217D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93F9855C4E67B6C28777D5986B129ADD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		191570F1C881FC02B842AA9167CCDC91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FFAD5A86DE7CE99367722E237B68647 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43D17692D3687F5E79611B8EE386590E /* Pods-Nolza */ = {
+			isa = PBXGroup;
+			children = (
+				7CD15832D52B1C16B7BBED269E28E067 /* Info.plist */,
+				FC4EB1B6837C6EB793D0BB1B150C9CE7 /* Pods-Nolza.modulemap */,
+				D7390B4FA496E10D7EB8869C5F09D221 /* Pods-Nolza-acknowledgements.markdown */,
+				1B54DC17359E44C457BAF24F56AD5878 /* Pods-Nolza-acknowledgements.plist */,
+				F518C57103019EA3BD795C54C1B90814 /* Pods-Nolza-dummy.m */,
+				0E3421D9BD8DA81A0097C58169E8FBA3 /* Pods-Nolza-frameworks.sh */,
+				EB11AE605DA400B58C109777E0D29561 /* Pods-Nolza-resources.sh */,
+				DEFCB78C585EC0C9BD30F1322E03C3CB /* Pods-Nolza-umbrella.h */,
+				283BB37AE7402687A56FE925011BC9FD /* Pods-Nolza.debug.xcconfig */,
+				1B32843349C1F64B4E7D479D5459E57F /* Pods-Nolza.release.xcconfig */,
+			);
+			name = "Pods-Nolza";
+			path = "Target Support Files/Pods-Nolza";
+			sourceTree = "<group>";
+		};
+		5CF2AA3CBBA31326CD748AAD5CC1340C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B7E0EA1A45C5D4671BFBEDE1B784DF8 /* DORM.modulemap */,
+				E2EB5D0856C3B9C123896AB2DD9D7ED2 /* DORM.xcconfig */,
+				A7B9096683FD2610C6F5EE9AC4F1E2BE /* DORM-dummy.m */,
+				6E4E97A40579903F7415817E95FCA340 /* DORM-prefix.pch */,
+				2E650B4342514FDD123177123753E357 /* DORM-umbrella.h */,
+				51F4C02322CE0A67AF041A02C2067ADD /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DORM";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				CCB76AA956717BACBADA8748C89AA9B3 /* Pods */,
+				9BDC49D7E09BC53F840D9756EEB26D64 /* Products */,
+				A0D3A11E1C36C2D811BA8DFF147B01A3 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9BDC49D7E09BC53F840D9756EEB26D64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B7EC58A7859DD81708DC214EC4F9E61 /* DORM.framework */,
+				FB6C239CC8FA96AA15C744D4FD8D01BB /* Pods_Nolza.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F549E72522BE93B6A6438C6A2DE73FF /* DORM */ = {
+			isa = PBXGroup;
+			children = (
+				36432101809DCF0E17044D8C2FE3AD1F /* DeviceResize.swift */,
+				6FDD0E0A3389342DDBC9EE1AE3DFB66A /* InstagramManager.swift */,
+				55D924138400B52ABB3862AA00B7ABA5 /* iOSDevCenters+GIF.swift */,
+				4B6CC3B57F021818091ACB0F1137F9A3 /* UIButton+Extension.swift */,
+				692208D14BC768E91DAC96C56E16B294 /* UIColor+Extension.swift */,
+				2D83D9AC2E7A643F039A22FA71F7CEC7 /* UILabel+Extension.swift */,
+				1AC23DD4EB1BA38B65A229540599AA50 /* UINavigationController+Extension.swift */,
+				FBF7638DD5071FB75A6C42CB2D2363EC /* UITabBarController+Extension.swift */,
+				6D4970DC728BB0BA52955D8ABBBBC5F0 /* UITextField+Extension.swift */,
+				5C343AE1A7054D0BC2FEC903F81D2573 /* UIView+Extension.swift */,
+				2482167857474DB40E98134E74F50DFA /* WaterMarkUtil.swift */,
+				5CF2AA3CBBA31326CD748AAD5CC1340C /* Support Files */,
+			);
+			name = DORM;
+			path = DORM;
+			sourceTree = "<group>";
+		};
+		A0D3A11E1C36C2D811BA8DFF147B01A3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				43D17692D3687F5E79611B8EE386590E /* Pods-Nolza */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCB76AA956717BACBADA8748C89AA9B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F549E72522BE93B6A6438C6A2DE73FF /* DORM */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		09E125DFA07D23FE2D619EA73F70787F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62C0B1665CC509E63EF882764F1563E9 /* Pods-Nolza-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9423B1E28461E2085753A1DA878D77D0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CC6EA0662AE2BF56D61D617B3CE77E8 /* DORM-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C7A9C22F20B8D397A669D46974F9956D /* Pods-Nolza */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA857E8BC650CA6D14BB3658A9E7A96D /* Build configuration list for PBXNativeTarget "Pods-Nolza" */;
+			buildPhases = (
+				B81E1895800F3D21AD2A8B13DF36ABE4 /* Sources */,
+				04B4BDC0F03A7D15BEC6776C9827217D /* Frameworks */,
+				09E125DFA07D23FE2D619EA73F70787F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				552FD92EB239104FAC5B16432CF1DB06 /* PBXTargetDependency */,
+			);
+			name = "Pods-Nolza";
+			productName = "Pods-Nolza";
+			productReference = FB6C239CC8FA96AA15C744D4FD8D01BB /* Pods_Nolza.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D4524A2B94042EA234D78421E05FA8DB /* DORM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F83BB7B001818B00784C2AB49F6B6B3B /* Build configuration list for PBXNativeTarget "DORM" */;
+			buildPhases = (
+				7877AA87940C98B543216C32323DC98B /* Sources */,
+				191570F1C881FC02B842AA9167CCDC91 /* Frameworks */,
+				9423B1E28461E2085753A1DA878D77D0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DORM;
+			productName = DORM;
+			productReference = 3B7EC58A7859DD81708DC214EC4F9E61 /* DORM.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 9BDC49D7E09BC53F840D9756EEB26D64 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4524A2B94042EA234D78421E05FA8DB /* DORM */,
+				C7A9C22F20B8D397A669D46974F9956D /* Pods-Nolza */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7877AA87940C98B543216C32323DC98B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A334DFB10048CC9124B13FC03CF27004 /* DeviceResize.swift in Sources */,
+				E2989BAE9F80FC4AAB0ECC3E60AB1EA7 /* DORM-dummy.m in Sources */,
+				D52F0A0050845AC0477BE015F4A65096 /* InstagramManager.swift in Sources */,
+				9387E264A3BFE4AC904D8D2BABDE55C4 /* iOSDevCenters+GIF.swift in Sources */,
+				A08487FFE693E9AB37351A2CE8833F34 /* UIButton+Extension.swift in Sources */,
+				7C75A752A7D43B0EB62A237713F2B26C /* UIColor+Extension.swift in Sources */,
+				D3ED31ABDC1618D6219A4297E7B6D77F /* UILabel+Extension.swift in Sources */,
+				D8DE93C53D603A4B816F025DFAC8ACE2 /* UINavigationController+Extension.swift in Sources */,
+				B5569C30F617AEB479E2B7779FF27DFA /* UITabBarController+Extension.swift in Sources */,
+				49188334865B583EAB177F6C8A87826E /* UITextField+Extension.swift in Sources */,
+				4CE00EAE977E4C71C0BE69CD8CAA9BA7 /* UIView+Extension.swift in Sources */,
+				712E7933B5DFBB00B46337B221013D92 /* WaterMarkUtil.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B81E1895800F3D21AD2A8B13DF36ABE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1728C3E869FCE6E9F7BD52EC01DCB955 /* Pods-Nolza-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		552FD92EB239104FAC5B16432CF1DB06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DORM;
+			target = D4524A2B94042EA234D78421E05FA8DB /* DORM */;
+			targetProxy = 4914FDD92CFA9D2BBA29B1447622D233 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0A530BEA422C966F84DD48650C5D8041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2EB5D0856C3B9C123896AB2DD9D7ED2 /* DORM.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DORM/DORM-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DORM/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DORM/DORM.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DORM;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		166E2CAC58E8608AD59A6F0B71C9C3E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		4F990639E9E38557D6CE5D15D2AAAEE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2EB5D0856C3B9C123896AB2DD9D7ED2 /* DORM.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DORM/DORM-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DORM/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DORM/DORM.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = DORM;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		58E25A017DD928D4A7A82A2ACC003A7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 283BB37AE7402687A56FE925011BC9FD /* Pods-Nolza.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Nolza/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Nolza/Pods-Nolza.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Nolza;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8D479A69C514710ED2CF1E2CC7EB1B9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B32843349C1F64B4E7D479D5459E57F /* Pods-Nolza.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Nolza/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Nolza/Pods-Nolza.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Nolza;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AA0B5BDEB018901CD8F88AAD05F5B893 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				166E2CAC58E8608AD59A6F0B71C9C3E0 /* Debug */,
+				AA0B5BDEB018901CD8F88AAD05F5B893 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA857E8BC650CA6D14BB3658A9E7A96D /* Build configuration list for PBXNativeTarget "Pods-Nolza" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58E25A017DD928D4A7A82A2ACC003A7F /* Debug */,
+				8D479A69C514710ED2CF1E2CC7EB1B9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F83BB7B001818B00784C2AB49F6B6B3B /* Build configuration list for PBXNativeTarget "DORM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F990639E9E38557D6CE5D15D2AAAEE7 /* Debug */,
+				0A530BEA422C966F84DD48650C5D8041 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
