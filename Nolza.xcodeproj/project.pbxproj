@@ -14,6 +14,8 @@
 		370606E11ED13F18001289C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370606DF1ED13F18001289C9 /* LaunchScreen.storyboard */; };
 		3755250F1EFE8FB200994322 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755250E1EFE8FB200994322 /* TabbarVC.swift */; };
 		375525111EFE904800994322 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375525101EFE904800994322 /* Tabbar.swift */; };
+		37B9AFEF1F1A2B3400DFF4D8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9AFEE1F1A2B3400DFF4D8 /* HomeViewController.swift */; };
+		37B9AFF11F1A2CCF00DFF4D8 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9AFF01F1A2CCF00DFF4D8 /* HomeCollectionViewCell.swift */; };
 		FA011B85137B7F50693A5F1D /* Pods_Nolza.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1380F1DDF43D286F1BDD15C /* Pods_Nolza.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		370606E21ED13F18001289C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3755250E1EFE8FB200994322 /* TabbarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
 		375525101EFE904800994322 /* Tabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		37B9AFEE1F1A2B3400DFF4D8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		37B9AFF01F1A2CCF00DFF4D8 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		7ED443419796E97BB0CB2E6A /* Pods-Nolza.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolza.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nolza/Pods-Nolza.debug.xcconfig"; sourceTree = "<group>"; };
 		A1380F1DDF43D286F1BDD15C /* Pods_Nolza.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nolza.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -83,6 +87,8 @@
 				370606DD1ED13F18001289C9 /* Assets.xcassets */,
 				370606DF1ED13F18001289C9 /* LaunchScreen.storyboard */,
 				370606E21ED13F18001289C9 /* Info.plist */,
+				37B9AFEE1F1A2B3400DFF4D8 /* HomeViewController.swift */,
+				37B9AFF01F1A2CCF00DFF4D8 /* HomeCollectionViewCell.swift */,
 			);
 			path = Nolza;
 			sourceTree = "<group>";
@@ -242,10 +248,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B9AFEF1F1A2B3400DFF4D8 /* HomeViewController.swift in Sources */,
 				370606D91ED13F18001289C9 /* ViewController.swift in Sources */,
 				370606D71ED13F18001289C9 /* AppDelegate.swift in Sources */,
 				3755250F1EFE8FB200994322 /* TabbarVC.swift in Sources */,
 				375525111EFE904800994322 /* Tabbar.swift in Sources */,
+				37B9AFF11F1A2CCF00DFF4D8 /* HomeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
