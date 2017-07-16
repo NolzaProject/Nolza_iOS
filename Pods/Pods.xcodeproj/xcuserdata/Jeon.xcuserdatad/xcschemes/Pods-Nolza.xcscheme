@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C7A9C22F20B8D397A669D46974F9956D"
+               BlueprintIdentifier = "3F81D89FD9911099E661F62FA1052D03"
                BuildableName = "Pods_Nolza.framework"
                BlueprintName = "Pods-Nolza"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C7A9C22F20B8D397A669D46974F9956D"
+            BlueprintIdentifier = "3F81D89FD9911099E661F62FA1052D03"
             BuildableName = "Pods_Nolza.framework"
             BlueprintName = "Pods-Nolza"
             ReferencedContainer = "container:Pods.xcodeproj">

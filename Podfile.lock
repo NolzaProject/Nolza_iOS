@@ -1,12 +1,24 @@
 PODS:
+  - Alamofire (4.5.0)
   - DORM (0.1.4)
+  - FSCalendar (2.7.9)
+  - Fusuma (1.1.0)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.0)
   - DORM (~> 0.1.4)
+  - FSCalendar
+  - Fusuma
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   DORM: 0f563d4254e92f763de711e67881b93a84be3cb2
+  FSCalendar: a04b09f16f811bc92e82f3cf852a15225233b9d5
+  Fusuma: 087dcf57cd0e8712d357dcf14559927da369642c
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 057d4fd18ee8f20f94ef8c17f6bbda97cd8fec0a
+PODFILE CHECKSUM: 91b6379e72265b5178ab95137f0e847d8fba6f2e
 
 COCOAPODS: 1.2.0
