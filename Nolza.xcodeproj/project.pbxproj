@@ -90,7 +90,6 @@
 				370606DF1ED13F18001289C9 /* LaunchScreen.storyboard */,
 				370606E21ED13F18001289C9 /* Info.plist */,
 				37B9AFEE1F1A2B3400DFF4D8 /* HomeViewController.swift */,
-				37239D3B1F1B7EBA00E6B23C /* SettingDurationVC.swift */,
 				37E7E1281F49A3C9004746E6 /* ThemeViewController.swift */,
 			);
 			path = Nolza;
@@ -108,6 +107,7 @@
 		375525131EFE90F100994322 /* InitialSetting */ = {
 			isa = PBXGroup;
 			children = (
+				37239D3B1F1B7EBA00E6B23C /* SettingDurationVC.swift */,
 			);
 			name = InitialSetting;
 			sourceTree = "<group>";
