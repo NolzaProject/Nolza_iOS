@@ -83,6 +83,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="x44-YM-gsj" kind="show" id="g9L-p0-bIw"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select your Travel dates." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTa-CA-Kra">
                                 <rect key="frame" x="16" y="74" width="278" height="30"/>
@@ -103,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-447.19999999999999" y="106.59670164917542"/>
+            <point key="canvasLocation" x="-681" y="107"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hJe-s4-4bu">
@@ -189,7 +192,7 @@
             </objects>
             <point key="canvasLocation" x="1172" y="961"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Nolza-->
         <scene sceneID="Ch5-Pj-8yt">
             <objects>
                 <viewController id="0dK-7U-1aW" customClass="HomeViewController" customModule="Nolza" customModuleProvider="target" sceneMemberID="viewController">
@@ -201,44 +204,128 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kdI-ih-Ws7">
-                                <rect key="frame" x="16" y="333" width="343" height="277"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kdI-ih-Ws7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PCW-ML-ZfB">
-                                    <size key="itemSize" width="100" height="100"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="32" minimumInteritemSpacing="32" id="PCW-ML-ZfB">
+                                    <size key="itemSize" width="90" height="144"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="16" minY="206" maxX="16" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="homecollectionviewcell" id="b5r-Go-FOt" customClass="HomeCollectionViewCell" customModule="Nolza" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="16" y="206" width="90" height="144"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="144"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g4F-Z6-Ac4">
-                                                    <rect key="frame" x="-70" y="-14" width="240" height="128"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4L-2F-cqM">
+                                                    <rect key="frame" x="25" y="100" width="65" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Spicy fried Chicken">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.34117999999999998" green="0.27843000000000001" blue="0.31764999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="14" name="AppleSDGothicNeo-Medium"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                                    <tabStops>
+                                                                        <textTab alignment="left" location="28">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="56">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="84">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="112">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="140">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="168">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="196">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="224">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="252">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="280">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="308">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                        <textTab alignment="left" location="336">
+                                                                            <options/>
+                                                                        </textTab>
+                                                                    </tabStops>
+                                                                </paragraphStyle>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXf-zT-DpF">
+                                                    <rect key="frame" x="0.0" y="100" width="20" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
+                                        <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
+                                        <connections>
+                                            <outlet property="missionImage" destination="g4F-Z6-Ac4" id="Qbl-Fy-xql"/>
+                                            <outlet property="missionName" destination="D4L-2F-cqM" id="1Mb-gk-ydj"/>
+                                            <outlet property="number" destination="OXf-zT-DpF" id="tdL-zc-WiC"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="0dK-7U-1aW" id="16h-Qu-pkb"/>
+                                    <outlet property="delegate" destination="0dK-7U-1aW" id="j5A-fz-6wc"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gPS-LD-hzZ" firstAttribute="top" secondItem="kdI-ih-Ws7" secondAttribute="bottom" id="URW-Uf-stJ"/>
+                            <constraint firstAttribute="trailing" secondItem="kdI-ih-Ws7" secondAttribute="trailing" id="dGc-uM-QKB"/>
+                            <constraint firstItem="kdI-ih-Ws7" firstAttribute="top" secondItem="3zH-l0-7V6" secondAttribute="bottom" id="fny-Ta-ruW"/>
+                            <constraint firstItem="kdI-ih-Ws7" firstAttribute="leading" secondItem="k33-Ad-1em" secondAttribute="leading" id="kvM-JP-Vbg"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="0dd-Bu-LSE"/>
+                    <navigationItem key="navigationItem" title="Nolza" id="KOB-1G-PVR"/>
                     <connections>
                         <outlet property="collectionview" destination="kdI-ih-Ws7" id="vET-0U-orD"/>
+                        <outlet property="themeView" destination="6Fy-Og-okr" id="owC-ji-AUP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Va-sq-zqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <containerView opaque="NO" contentMode="scaleToFill" id="6Fy-Og-okr">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <connections>
+                        <segue destination="Sb8-ZI-buU" kind="embed" id="m3M-ca-vR5"/>
+                    </connections>
+                </containerView>
             </objects>
-            <point key="canvasLocation" x="1840.8" y="-219.04047976011995"/>
+            <point key="canvasLocation" x="2780" y="-219.04047976011995"/>
         </scene>
         <!--TabbarVC-->
         <scene sceneID="rta-OX-9vG">
@@ -250,7 +337,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="0dK-7U-1aW" kind="relationship" relationship="viewControllers" id="Vh6-J3-P8n"/>
+                        <segue destination="fLb-33-Sar" kind="relationship" relationship="viewControllers" id="Vh6-J3-P8n"/>
                         <segue destination="Pj9-Om-Pax" kind="relationship" relationship="viewControllers" id="zch-x9-cGL"/>
                         <segue destination="LKZ-d9-lAU" kind="relationship" relationship="viewControllers" id="Lrf-ps-xIw"/>
                         <segue destination="5sY-mv-oue" kind="relationship" relationship="viewControllers" id="I8m-fB-jGl"/>
@@ -259,6 +346,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3M-Io-Chb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="887" y="108"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MAI-8Z-pVG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fLb-33-Sar" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="0dd-Bu-LSE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pep-ZH-s4j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0dK-7U-1aW" kind="relationship" relationship="rootViewController" id="drw-Ns-SOG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GEr-KC-Bp4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1840.8" y="-219.04047976011995"/>
+        </scene>
+        <!--Theme View Controller-->
+        <scene sceneID="7l6-mi-ktd">
+            <objects>
+                <viewController id="Sb8-ZI-buU" customClass="ThemeViewController" customModule="Nolza" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6rw-Zc-c8F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="237"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.070000000000000007" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2mY-9E-API">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="237"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.20784313730000001" green="0.69019607839999997" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view alpha="0.20000000000000001" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sIM-89-lKB">
+                                <rect key="frame" x="20" y="20" width="130" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.20784313730000001" green="0.69019607839999997" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Korean food" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtX-NR-Vll">
+                                <rect key="frame" x="20" y="20" width="130" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="237"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="sIM-89-lKB" id="FU8-jc-fHv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eh0-S7-bBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3965.5999999999999" y="-626.53673163418296"/>
         </scene>
     </scenes>
 </document>
