@@ -44,6 +44,13 @@ extension HomeViewController: UICollectionViewDataSource{
     }
 }
 
+extension HomeViewController: UICollectionViewDelegate{
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "missionSegue", sender: self)
+    }
+}
+
 class HomeCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var missionImage: UIImageView!

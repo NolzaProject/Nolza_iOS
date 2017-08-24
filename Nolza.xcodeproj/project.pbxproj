@@ -14,6 +14,8 @@
 		370606E11ED13F18001289C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370606DF1ED13F18001289C9 /* LaunchScreen.storyboard */; };
 		37239D3C1F1B7EBA00E6B23C /* SettingDurationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37239D3B1F1B7EBA00E6B23C /* SettingDurationVC.swift */; };
 		3751AE881F4EF2D50028652A /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3751AE871F4EF2D50028652A /* JoinViewController.swift */; };
+		3751AE8B1F4F03A90028652A /* ThemeMissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3751AE8A1F4F03A90028652A /* ThemeMissionViewController.swift */; };
+		3751AE8D1F4F03C40028652A /* MissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3751AE8C1F4F03C40028652A /* MissionViewController.swift */; };
 		3755250F1EFE8FB200994322 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3755250E1EFE8FB200994322 /* TabbarVC.swift */; };
 		375525111EFE904800994322 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375525101EFE904800994322 /* Tabbar.swift */; };
 		37B9AFEF1F1A2B3400DFF4D8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9AFEE1F1A2B3400DFF4D8 /* HomeViewController.swift */; };
@@ -32,6 +34,8 @@
 		370606E21ED13F18001289C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37239D3B1F1B7EBA00E6B23C /* SettingDurationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingDurationVC.swift; sourceTree = "<group>"; };
 		3751AE871F4EF2D50028652A /* JoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		3751AE8A1F4F03A90028652A /* ThemeMissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeMissionViewController.swift; sourceTree = "<group>"; };
+		3751AE8C1F4F03C40028652A /* MissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionViewController.swift; sourceTree = "<group>"; };
 		3755250E1EFE8FB200994322 /* TabbarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
 		375525101EFE904800994322 /* Tabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 		37B9AFEE1F1A2B3400DFF4D8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -82,19 +86,29 @@
 		370606D51ED13F18001289C9 /* Nolza */ = {
 			isa = PBXGroup;
 			children = (
+				3751AE891F4EFF1E0028652A /* Supporting */,
 				375525141EFE90FD00994322 /* Login */,
 				375525131EFE90F100994322 /* InitialSetting */,
 				375525121EFE90D600994322 /* TabbarSetting */,
-				370606D61ED13F18001289C9 /* AppDelegate.swift */,
 				370606D81ED13F18001289C9 /* ViewController.swift */,
 				370606DA1ED13F18001289C9 /* Main.storyboard */,
+				37B9AFEE1F1A2B3400DFF4D8 /* HomeViewController.swift */,
+				37E7E1281F49A3C9004746E6 /* ThemeViewController.swift */,
+				3751AE8A1F4F03A90028652A /* ThemeMissionViewController.swift */,
+				3751AE8C1F4F03C40028652A /* MissionViewController.swift */,
+			);
+			path = Nolza;
+			sourceTree = "<group>";
+		};
+		3751AE891F4EFF1E0028652A /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
 				370606DD1ED13F18001289C9 /* Assets.xcassets */,
 				370606DF1ED13F18001289C9 /* LaunchScreen.storyboard */,
 				370606E21ED13F18001289C9 /* Info.plist */,
-				37B9AFEE1F1A2B3400DFF4D8 /* HomeViewController.swift */,
-				37E7E1281F49A3C9004746E6 /* ThemeViewController.swift */,
+				370606D61ED13F18001289C9 /* AppDelegate.swift */,
 			);
-			path = Nolza;
+			name = Supporting;
 			sourceTree = "<group>";
 		};
 		375525121EFE90D600994322 /* TabbarSetting */ = {
@@ -260,8 +274,10 @@
 				37E7E1291F49A3C9004746E6 /* ThemeViewController.swift in Sources */,
 				37239D3C1F1B7EBA00E6B23C /* SettingDurationVC.swift in Sources */,
 				370606D71ED13F18001289C9 /* AppDelegate.swift in Sources */,
+				3751AE8B1F4F03A90028652A /* ThemeMissionViewController.swift in Sources */,
 				3755250F1EFE8FB200994322 /* TabbarVC.swift in Sources */,
 				375525111EFE904800994322 /* Tabbar.swift in Sources */,
+				3751AE8D1F4F03C40028652A /* MissionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

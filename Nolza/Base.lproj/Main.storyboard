@@ -241,7 +241,7 @@
             </objects>
             <point key="canvasLocation" x="-132" y="106.59670164917542"/>
         </scene>
-        <!--View Controller-->
+        <!--Search-->
         <scene sceneID="hJe-s4-4bu">
             <objects>
                 <viewController id="Pj9-Om-Pax" sceneMemberID="viewController">
@@ -263,13 +263,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="LoQ-6i-mh5"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="search" id="LoQ-6i-mh5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tyM-U5-V68" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2780" y="435.83208395802103"/>
         </scene>
-        <!--View Controller-->
+        <!--Mypage-->
         <scene sceneID="YSi-wm-kdv">
             <objects>
                 <viewController id="5sY-mv-oue" sceneMemberID="viewController">
@@ -291,13 +291,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="BbL-Kh-QPZ"/>
+                    <tabBarItem key="tabBarItem" title="Mypage" image="mypage" id="BbL-Kh-QPZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ww7-T9-eRi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="345" y="960"/>
         </scene>
-        <!--View Controller-->
+        <!--Completed-->
         <scene sceneID="5H2-Sl-9MA">
             <objects>
                 <viewController id="LKZ-d9-lAU" sceneMemberID="viewController">
@@ -319,7 +319,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="Tn6-WH-02Y"/>
+                    <tabBarItem key="tabBarItem" title="Completed" image="completed" id="Tn6-WH-02Y"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Wt-aj-p9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -408,6 +408,7 @@
                     <connections>
                         <outlet property="collectionview" destination="kdI-ih-Ws7" id="vET-0U-orD"/>
                         <outlet property="themeView" destination="6Fy-Og-okr" id="owC-ji-AUP"/>
+                        <segue destination="38m-Bd-16L" kind="show" identifier="missionSegue" id="u6w-Ph-orp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Va-sq-zqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -441,11 +442,11 @@
             </objects>
             <point key="canvasLocation" x="1824.8" y="107.49625187406298"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Home-->
         <scene sceneID="MAI-8Z-pVG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fLb-33-Sar" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="0dd-Bu-LSE"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="0dd-Bu-LSE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pep-ZH-s4j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -569,6 +570,182 @@
             </objects>
             <point key="canvasLocation" x="4535" y="-626"/>
         </scene>
+        <!--Theme Mission View Controller-->
+        <scene sceneID="1Fz-Zj-tub">
+            <objects>
+                <viewController id="iIm-sp-Hiu" customClass="ThemeMissionViewController" customModule="Nolza" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bdi-jr-f53"/>
+                        <viewControllerLayoutGuide type="bottom" id="xyw-Xr-X26"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cj3-er-XcQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Korean food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nh-Zt-Qsf">
+                                <rect key="frame" x="20" y="85" width="113" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zuh-C5-OHA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5437.6000000000004" y="-563.56821589205401"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IfX-PF-Sqh">
+            <objects>
+                <viewController id="Bs6-qY-9Uw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lsI-pu-KNR"/>
+                        <viewControllerLayoutGuide type="bottom" id="KpB-AR-BAQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ann-Zk-oO4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="65" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="sGK-Ew-4ft">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="Hkw-ba-oh3">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="274"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.20784313730000001" green="0.69019607839999997" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="BuB-dx-zJe">
+                                        <rect key="frame" x="0.0" y="275" width="375" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BuB-dx-zJe" id="UmU-iQ-zj6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sGK-Ew-4ft" firstAttribute="leading" secondItem="Ann-Zk-oO4" secondAttribute="leading" id="HA8-Q6-cAD"/>
+                            <constraint firstItem="sGK-Ew-4ft" firstAttribute="top" secondItem="lsI-pu-KNR" secondAttribute="bottom" id="f2c-jD-1Br"/>
+                            <constraint firstItem="KpB-AR-BAQ" firstAttribute="top" secondItem="sGK-Ew-4ft" secondAttribute="bottom" id="sGJ-B9-Jyj"/>
+                            <constraint firstAttribute="trailing" secondItem="sGK-Ew-4ft" secondAttribute="trailing" id="zrh-pQ-3Tn"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fb9-hU-k4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6078" y="85"/>
+        </scene>
+        <!--Mission View Controller-->
+        <scene sceneID="dUR-Tl-dam">
+            <objects>
+                <viewController id="38m-Bd-16L" customClass="MissionViewController" customModule="Nolza" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="afC-ci-mgv"/>
+                        <viewControllerLayoutGuide type="bottom" id="as5-1j-MhG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hek-Is-OgD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="k7X-Rv-ZIb">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="3Cy-At-IzC">
+                                    <size key="itemSize" width="375" height="65"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="358" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Bq8-Ar-S10" customClass="MissionCollectionViewCell" customModule="Nolza" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="358" width="375" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fJW-xH-3Ec">
+                                                    <rect key="frame" x="23" y="20" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhu-Wu-gIT">
+                                                    <rect key="frame" x="70" y="22" width="210" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="infoImage" destination="fJW-xH-3Ec" id="fxh-6l-5k3"/>
+                                            <outlet property="infoLabel" destination="Mhu-Wu-gIT" id="7BO-IP-IUe"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="38m-Bd-16L" id="PRV-ea-HLy"/>
+                                    <outlet property="delegate" destination="38m-Bd-16L" id="iDc-mN-pgT"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k7X-Rv-ZIb" firstAttribute="top" secondItem="afC-ci-mgv" secondAttribute="bottom" id="sK1-bZ-jFk"/>
+                            <constraint firstItem="k7X-Rv-ZIb" firstAttribute="leading" secondItem="hek-Is-OgD" secondAttribute="leading" id="suX-rb-HLg"/>
+                            <constraint firstAttribute="trailing" secondItem="k7X-Rv-ZIb" secondAttribute="trailing" id="v1O-PO-nAh"/>
+                            <constraint firstItem="as5-1j-MhG" firstAttribute="top" secondItem="k7X-Rv-ZIb" secondAttribute="bottom" id="vtx-wg-rtB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgView" destination="ReF-E0-0Lf" id="qYE-6N-FB4"/>
+                        <outlet property="collectionView" destination="k7X-Rv-ZIb" id="jEI-J4-5m3"/>
+                        <outlet property="infoView" destination="cnk-iB-xJB" id="2Gs-dr-Gzx"/>
+                        <outlet property="photoView" destination="rC1-4g-hOn" id="r6Z-pA-Aj1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FcU-aP-o0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="cnk-iB-xJB">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="421"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Samgyepsal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlK-KH-Ij4">
+                            <rect key="frame" x="20" y="21" width="108" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="22"/>
+                            <color key="textColor" red="0.20784313730000001" green="0.69019607839999997" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="rC1-4g-hOn">
+                            <rect key="frame" x="87" y="69" width="200" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rV-Xt-2V1">
+                            <rect key="frame" x="34" y="304" width="307" height="84"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <string key="text">This is the individual mission details screen.  A detailed description of the Samgyepsal will be entered. # Grilled	# Fork # Korean Barbecue</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view alpha="0.050000000000000003" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ReF-E0-0Lf">
+                            <rect key="frame" x="20" y="290" width="335" height="112"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.20784313730000001" green="0.69019607839999997" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="4796" y="559"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="5iI-4J-OZ6">
             <objects>
@@ -588,4 +765,11 @@
             <point key="canvasLocation" x="-1071.2" y="106.59670164917542"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="completed" width="30" height="27"/>
+        <image name="home" width="30" height="27"/>
+        <image name="mypage" width="30" height="27"/>
+        <image name="search" width="30" height="27"/>
+        <image name="sky" width="480" height="640"/>
+    </resources>
 </document>
