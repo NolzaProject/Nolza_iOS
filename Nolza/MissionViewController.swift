@@ -21,12 +21,17 @@ class MissionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         infoView.frame = CGRect(x: 0, y: -64, width: 375, height: 421)
-            collectionView.addSubview(infoView)
+        collectionView.addSubview(infoView)
         photoView.layer.masksToBounds = true
         photoView.layer.cornerRadius = photoView.width / 2
         
         bgView.layer.masksToBounds = true
         bgView.layer.cornerRadius = 12
+        
+        let line = UIView()
+        line.frame = CGRect(x: 0, y: 358, width: 375, height: 1)
+        line.backgroundColor = #colorLiteral(red: 0.9019607843, green: 0.9019607843, blue: 0.9019607843, alpha: 1)
+        collectionView.addSubview(line)
         
     }
 }
@@ -42,7 +47,7 @@ extension MissionViewController: UICollectionViewDataSource{
             return UICollectionViewCell()
         }
         
-        cell.infoImage.image = UIImage(named:"home")
+        cell.infoImage.image = UIImage(named:"missionIcon\(indexPath.item)")
         cell.infoLabel.text = "Spicy fried Chicken"
 
         return cell
@@ -57,7 +62,6 @@ class MissionCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     
 }
