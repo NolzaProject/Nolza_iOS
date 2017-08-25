@@ -12,6 +12,7 @@ import CoreMotion
 import Photos
 
 @objc protocol FSCameraViewDelegate: class {
+    func cameraDidShot(_ image: UIImage)
     func cameraShotFinished(_ image: UIImage)
 }
 
@@ -74,6 +75,8 @@ final class FSCameraView: UIView, UIGestureRecognizerDelegate {
         }
 
         self.isHidden = false
+        self.shotButton.isEnabled = true
+        photoCount = 0
         
         // AVCapture
         session = AVCaptureSession()
@@ -185,6 +188,11 @@ final class FSCameraView: UIView, UIGestureRecognizerDelegate {
 
     @IBAction func shotButtonPressed(_ sender: UIButton) {
         
+        if (photoCount > 0) {
+            return
+        }
+        photoCount += 1
+        
         guard let imageOutput = imageOutput else {
             
             return
@@ -219,64 +227,69 @@ final class FSCameraView: UIView, UIGestureRecognizerDelegate {
                 videoConnection?.videoOrientation = .portrait
             }
 
-            imageOutput.captureStillImageAsynchronously(from: videoConnection) { (buffer, error) -> Void in
+    
+            imageOutput.captureStillImageAsynchronously(from: videoConnection, completionHandler: { (buffer, error) -> Void in
                 
-                self.stopCamera()
+                self.session?.stopRunning()
                 
-                guard let data = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer),
-                    let image = UIImage(data: data),
-                    let delegate = self.delegate else {
-                        
-                        return
-                }
+                let data = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer)
                 
-                // Image size
-                let iw: CGFloat
-                let ih: CGFloat
-                
-                switch (orientation) {
+                if let image = UIImage(data: data!), let delegate = self.delegate {
                     
-                case .landscapeLeft, .landscapeRight:
+                    // Image size
+                    var iw: CGFloat
+                    var ih: CGFloat
                     
-                    // Swap width and height if orientation is landscape
-                    iw = image.size.height
-                    ih = image.size.width
-                    
-                default:
-                    
-                    iw = image.size.width
-                    ih = image.size.height
-                    
-                }
-                
-                // Frame size
-                let sw = self.previewViewContainer.frame.width
-                
-                // The center coordinate along Y axis
-                let rcy = ih * 0.5
-                
-                guard let imageRef = image.cgImage?.cropping(to: CGRect(x: rcy-iw*0.5, y: 0 , width: iw, height: iw)) else {
-                    
-                    return
-                }
-                
-                DispatchQueue.main.async(execute: { () -> Void in
-                    
-                    let image = fusumaCropImage ? UIImage(cgImage: imageRef, scale: sw/iw, orientation: image.imageOrientation) : image
-                    
-                    delegate.cameraShotFinished(image)
-                    
-                    if fusumaSavesImage {
-                        
-                        self.saveImageToCameraRoll(image: image)
+                    switch (orientation) {
+                    case .landscapeLeft, .landscapeRight:
+                        // Swap width and height if orientation is landscape
+                        iw = image.size.height
+                        ih = image.size.width
+                    default:
+                        iw = image.size.width
+                        ih = image.size.height
                     }
                     
-                    self.session       = nil
-                    self.device        = nil
-                    self.imageOutput   = nil
-                    self.motionManager = nil
-                })
-            }
+                    // Frame size
+                    let sw = self.previewViewContainer.frame.width
+                    
+                    // The center coordinate along Y axis
+                    let rcy = ih * 0.5
+                    
+                    let imageRef = image.cgImage?.cropping(to: CGRect(x: rcy-iw*0.5, y: 0 , width: iw, height: iw))
+                    
+                    
+                    
+                    //DispatchQueue.main.async { () -> Void in
+                    
+                    viewController!.doneButton.tintColor = UIColor.white
+                    viewController!.doneButton.layer.shadowColor = UIColor.black.cgColor
+                    viewController!.doneButton.layer.shadowRadius = 1
+                    viewController!.doneButton.layer.shadowOffset =  CGSize(width: 0.0, height: 0.0)
+                    viewController!.doneButton.layer.shadowOpacity = 1.0
+                    viewController!.doneButton.isEnabled = true
+                    viewController!.doneButton.isUserInteractionEnabled = true
+                    
+                    if fusumaCropImage {
+                        let resizedImage = UIImage(cgImage: imageRef!, scale: sw/iw, orientation: image.imageOrientation)
+                        delegate.cameraDidShot(resizedImage)
+                        //delegate.cameraShotFinished(resizedImage)
+                    } else {
+                        //delegate.cameraShotFinished(image)
+                        photoFlag = !photoFlag
+                        self.shotButton.isEnabled = false
+                        photoCount -= 1
+                        delegate.cameraDidShot(image)
+                    }
+                    
+                    self.session     = nil
+                    self.device      = nil
+                    self.imageOutput = nil
+                    
+                    //}
+                }
+                
+            })
         })
     }
     

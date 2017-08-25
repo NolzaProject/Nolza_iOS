@@ -700,6 +700,9 @@
                             <rect key="frame" x="319" y="17" width="36" height="36"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="camera"/>
+                            <connections>
+                                <action selector="camearaButtonPressed:" destination="38m-Bd-16L" eventType="touchUpInside" id="NdP-qo-Rq7"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
