@@ -597,6 +597,138 @@
             </objects>
             <point key="canvasLocation" x="5437.6000000000004" y="-563.56821589205401"/>
         </scene>
+        <!--Base Mission-->
+        <scene sceneID="P3z-z8-nuK">
+            <objects>
+                <viewController id="fMo-3I-eoB" customClass="Base_Mission" customModule="Nolza" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wqV-Dt-gVV"/>
+                        <viewControllerLayoutGuide type="bottom" id="g8R-0d-dgV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ytr-eY-c0X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Samgyepsal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHm-uf-zoQ">
+                                <rect key="frame" x="23" y="72" width="108" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="22"/>
+                                <color key="textColor" red="0.20784313730000001" green="0.69019607839999997" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="SdK-Xg-YVd">
+                                <rect key="frame" x="90" y="120" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view alpha="0.05000000074505806" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="87q-s6-iSB">
+                                <rect key="frame" x="23" y="341" width="335" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.20784313730000001" green="0.69019607839999997" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hF5-SG-VcO">
+                                <rect key="frame" x="137" y="75" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Base_Mission" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKl-P1-4jC">
+                                <rect key="frame" x="37" y="355" width="307" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="bgView" destination="87q-s6-iSB" id="KMy-Ec-P6Z"/>
+                        <outlet property="contentLabel" destination="TKl-P1-4jC" id="HyF-8q-46g"/>
+                        <outlet property="difficultyLabel" destination="hF5-SG-VcO" id="pNJ-Rm-35a"/>
+                        <outlet property="missionLabel" destination="rHm-uf-zoQ" id="rkG-rr-KAT"/>
+                        <outlet property="photoView" destination="SdK-Xg-YVd" id="A4v-XW-N7E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t0C-37-Gpx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1825" y="-575"/>
+        </scene>
+        <!--Mission-->
+        <scene sceneID="9MM-Qr-FrD">
+            <objects>
+                <viewController id="6nc-w7-h48" customClass="MissionCompleteViewController" customModule="Nolza" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IDa-79-q6h"/>
+                        <viewControllerLayoutGuide type="bottom" id="QPd-PI-Re1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T3x-tV-asL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="wxC-HC-uhW">
+                                <rect key="frame" x="59" y="133" width="253" height="253"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Samgyepsal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYP-NC-JQN">
+                                <rect key="frame" x="20" y="85" width="108" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="22"/>
+                                <color key="textColor" red="0.20784313730000001" green="0.69019607839999997" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.05000000074505806" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ED-w4-kjt">
+                                <rect key="frame" x="20" y="415" width="335" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.20784313730000001" green="0.69019607839999997" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XwR-Kv-253">
+                                <rect key="frame" x="34" y="429" width="307" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Congratulations! 
+Mission complete!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXX-Je-5yX">
+                                <rect key="frame" x="134" y="88" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0G-pg-vRC">
+                                <rect key="frame" x="166" y="530" width="43" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="share"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mission" id="ufn-an-kJd">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; home" style="plain" id="0Kb-rO-k0d">
+                            <connections>
+                                <action selector="backToHome:" destination="6nc-w7-h48" id="sFM-q9-KQE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bgView" destination="8ED-w4-kjt" id="noZ-gS-shb"/>
+                        <outlet property="contentLabel" destination="XwR-Kv-253" id="vpt-rm-33v"/>
+                        <outlet property="difficultyLabel" destination="QXX-Je-5yX" id="dvj-cG-aMz"/>
+                        <outlet property="missionLabel" destination="RYP-NC-JQN" id="r8d-PI-iu5"/>
+                        <outlet property="photoView" destination="wxC-HC-uhW" id="mZf-jW-ltq"/>
+                        <segue destination="c7i-a0-zvh" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMain:" id="RVM-vx-Lu6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sPI-8s-ULL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="c7i-a0-zvh" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="5732" y="558"/>
+        </scene>
         <!--Mission-->
         <scene sceneID="dUR-Tl-dam">
             <objects>
@@ -661,10 +793,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Mission" id="q3j-kD-YI8"/>
                     <connections>
-                        <outlet property="bgView" destination="ReF-E0-0Lf" id="qYE-6N-FB4"/>
+                        <outlet property="bgView" destination="ReF-E0-0Lf" id="wId-9r-AEY"/>
                         <outlet property="collectionView" destination="k7X-Rv-ZIb" id="jEI-J4-5m3"/>
+                        <outlet property="contentLabel" destination="9rV-Xt-2V1" id="1ON-9W-5sF"/>
+                        <outlet property="difficultyLabel" destination="Ntd-0Y-S03" id="djv-MM-q4A"/>
                         <outlet property="infoView" destination="cnk-iB-xJB" id="2Gs-dr-Gzx"/>
-                        <outlet property="photoView" destination="rC1-4g-hOn" id="r6Z-pA-Aj1"/>
+                        <outlet property="missionLabel" destination="SlK-KH-Ij4" id="NLy-dc-Gca"/>
+                        <outlet property="photoView" destination="rC1-4g-hOn" id="4yN-PY-CWC"/>
+                        <segue destination="6nc-w7-h48" kind="show" identifier="completeSegue" id="TMA-1w-ixU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FcU-aP-o0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -677,6 +813,14 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="22"/>
                             <color key="textColor" red="0.20784313730000001" green="0.69019607839999997" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntd-0Y-S03">
+                            <rect key="frame" x="134" y="24" width="22" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="rC1-4g-hOn">
@@ -736,6 +880,7 @@
         <image name="missionIcon3" width="24" height="18"/>
         <image name="mypage" width="30" height="27"/>
         <image name="search" width="30" height="27"/>
+        <image name="share" width="43" height="43"/>
         <image name="sky" width="480" height="640"/>
     </resources>
 </document>

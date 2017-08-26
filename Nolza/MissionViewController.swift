@@ -9,13 +9,9 @@
 import UIKit
 import Fusuma
 
-class MissionViewController: UIViewController {
+class MissionViewController: Base_Mission {
 
     @IBOutlet var infoView: UIView!
-    
-    @IBOutlet weak var photoView: UIImageView!
-    
-    @IBOutlet weak var bgView: UIView!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -25,17 +21,11 @@ class MissionViewController: UIViewController {
         super.viewDidLoad()
         infoView.frame = CGRect(x: 0, y: -64, width: 375, height: 421)
         collectionView.addSubview(infoView)
-        photoView.layer.masksToBounds = true
-        photoView.layer.cornerRadius = photoView.width / 2
-        
-        bgView.layer.masksToBounds = true
-        bgView.layer.cornerRadius = 12
         
         let line = UIView()
         line.frame = CGRect(x: 0, y: 358, width: 375, height: 1)
         line.backgroundColor = #colorLiteral(red: 0.9019607843, green: 0.9019607843, blue: 0.9019607843, alpha: 1)
         collectionView.addSubview(line)
-        
     }
 }
 extension MissionViewController: FusumaDelegate{
@@ -67,9 +57,9 @@ extension MissionViewController: FusumaDelegate{
         default:
             print("Image selected")
         }
-        //perform segue
-        //imageMain = image
-        photoView.image = image
+        //서버 요청
+        //파일 업로드 후 성공시 이미지 넘김.
+        sendImage = image
     }
     
     func fusumaVideoCompleted(withFileURL fileURL: URL) {
@@ -87,7 +77,7 @@ extension MissionViewController: FusumaDelegate{
             print("Called just after dismissed FusumaViewController")
         }
         
-       // performSegue(withIdentifier: "mainToCamera", sender: self)
+       performSegue(withIdentifier: "completeSegue", sender: self)
     }
     
     func fusumaCameraRollUnauthorized() {
@@ -109,6 +99,16 @@ extension MissionViewController: FusumaDelegate{
         }))
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "completeSegue"
+        {
+            let destination = segue.destination as! MissionCompleteViewController
+            
+            destination.receivedImg = sendImage
+        }
     }
 }
 
