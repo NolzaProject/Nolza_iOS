@@ -564,13 +564,14 @@
                         <outlet property="collectionView" destination="Lom-WF-Pmm" id="KFg-Ws-sex"/>
                         <outlet property="labelBackground" destination="sIM-89-lKB" id="PFd-I9-31Z"/>
                         <outlet property="pageControl" destination="bVZ-q9-cHc" id="2ym-Qd-9x9"/>
+                        <segue destination="iIm-sp-Hiu" kind="show" identifier="themeMissionSegue" id="NSm-WB-HuK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eh0-S7-bBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4535" y="-626"/>
         </scene>
-        <!--Theme Mission View Controller-->
+        <!--Theme-->
         <scene sceneID="1Fz-Zj-tub">
             <objects>
                 <viewController id="iIm-sp-Hiu" customClass="ThemeMissionViewController" customModule="Nolza" customModuleProvider="target" sceneMemberID="viewController">
@@ -582,16 +583,122 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Korean food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nh-Zt-Qsf">
-                                <rect key="frame" x="20" y="85" width="113" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hU3-N4-bjX">
+                                <rect key="frame" x="0.0" y="-44" width="375" height="711"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Korean food" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHO-LJ-Olf">
+                                        <rect key="frame" x="20" y="21" width="113" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Samgyepsal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgl-F5-HxP">
+                                        <rect key="frame" x="20" y="312" width="108" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="22"/>
+                                        <color key="textColor" red="0.20784313730000001" green="0.69019607839999997" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="pv7-uB-uye">
+                                        <rect key="frame" x="87" y="360" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <view alpha="0.05000000074505806" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lTm-h8-hSw">
+                                        <rect key="frame" x="20" y="184" width="335" height="91"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.20784313730000001" green="0.69019607839999997" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fth-Lk-fHd">
+                                        <rect key="frame" x="34" y="198" width="307" height="63"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">This is the theme mission details screen.
+A detailed description of the theme will be entered.</string>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wv-Z4-nOG">
+                                        <rect key="frame" x="20" y="73" width="79" height="79"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="sky"/>
+                                        <connections>
+                                            <action selector="item1Pressed:" destination="iIm-sp-Hiu" eventType="touchUpInside" id="abZ-SB-KQD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeE-EJ-tLp">
+                                        <rect key="frame" x="276" y="73" width="79" height="79"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="sky"/>
+                                        <connections>
+                                            <action selector="item3Pressed:" destination="iIm-sp-Hiu" eventType="touchUpInside" id="eXr-UZ-ixB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPo-sj-w1U">
+                                        <rect key="frame" x="148" y="73" width="79" height="79"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="sky"/>
+                                        <connections>
+                                            <action selector="item2Pressed:" destination="iIm-sp-Hiu" eventType="touchUpInside" id="qxD-ZQ-cQ4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLe-qE-1CZ">
+                                        <rect key="frame" x="314" y="308" width="36" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="camera"/>
+                                        <connections>
+                                            <action selector="checkButtonPressed:" destination="iIm-sp-Hiu" eventType="touchUpInside" id="rbo-Fn-fbr"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibo-MA-BWw">
+                                        <rect key="frame" x="134" y="315.5" width="20.5" height="20.5"/>
+                                        <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20.5" id="Pkk-lT-1dF"/>
+                                            <constraint firstAttribute="width" constant="20.5" id="ba7-Tw-TJU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fgl-F5-HxP" firstAttribute="top" secondItem="hU3-N4-bjX" secondAttribute="top" constant="312" id="3zW-CL-g3G"/>
+                                    <constraint firstItem="fgl-F5-HxP" firstAttribute="top" secondItem="ibo-MA-BWw" secondAttribute="bottom" constant="-24" id="BVp-Oa-8Sk"/>
+                                    <constraint firstItem="ibo-MA-BWw" firstAttribute="leading" secondItem="fgl-F5-HxP" secondAttribute="trailing" constant="6" id="HcY-6Z-iRY"/>
+                                    <constraint firstAttribute="bottom" secondItem="fgl-F5-HxP" secondAttribute="bottom" constant="243" id="IXc-xT-xUI"/>
+                                    <constraint firstItem="fgl-F5-HxP" firstAttribute="leading" secondItem="hU3-N4-bjX" secondAttribute="leading" constant="20" id="WMO-u8-go0"/>
+                                    <constraint firstAttribute="trailing" secondItem="ibo-MA-BWw" secondAttribute="trailing" constant="220.5" id="lRF-Ru-pQE"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="iIm-sp-Hiu" id="8UN-qb-DQP"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hU3-N4-bjX" firstAttribute="top" secondItem="Bdi-jr-f53" secondAttribute="bottom" constant="-64" id="WC7-AA-dRd"/>
+                            <constraint firstItem="hU3-N4-bjX" firstAttribute="leading" secondItem="Cj3-er-XcQ" secondAttribute="leading" id="jJq-yd-6ql"/>
+                            <constraint firstAttribute="trailing" secondItem="hU3-N4-bjX" secondAttribute="trailing" id="m4a-pT-bjv"/>
+                            <constraint firstItem="xyw-Xr-X26" firstAttribute="top" secondItem="hU3-N4-bjX" secondAttribute="bottom" id="zdW-E5-QKo"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Theme" id="uZV-4z-n0m"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="bgView" destination="lTm-h8-hSw" id="Kwj-oD-BDx"/>
+                        <outlet property="checkButton" destination="JLe-qE-1CZ" id="kew-dQ-zut"/>
+                        <outlet property="contentLabel" destination="Fth-Lk-fHd" id="jFh-9F-sO6"/>
+                        <outlet property="difficultyLabel" destination="ibo-MA-BWw" id="Hhj-ag-MPV"/>
+                        <outlet property="item1" destination="5Wv-Z4-nOG" id="XhB-6v-49w"/>
+                        <outlet property="item2" destination="HPo-sj-w1U" id="eSv-Vy-HVf"/>
+                        <outlet property="item3" destination="IeE-EJ-tLp" id="BcR-Xa-gtS"/>
+                        <outlet property="missionLabel" destination="fgl-F5-HxP" id="6rc-bA-U7K"/>
+                        <outlet property="photoView" destination="pv7-uB-uye" id="k6q-2H-UIr"/>
+                        <outlet property="scrollView" destination="hU3-N4-bjX" id="ZIt-Ah-74F"/>
+                        <outlet property="titleLabel" destination="GHO-LJ-Olf" id="8hg-vD-mgL"/>
+                        <segue destination="6nc-w7-h48" kind="show" identifier="completeThemeSegue" id="DOO-q3-nyy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zuh-C5-OHA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -671,9 +778,8 @@
                                 <rect key="frame" x="59" y="133" width="253" height="253"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Samgyepsal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYP-NC-JQN">
-                                <rect key="frame" x="20" y="85" width="108" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Samgyepsal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYP-NC-JQN">
+                                <rect key="frame" x="20" y="85" width="107.5" height="28"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="22"/>
                                 <color key="textColor" red="0.20784313730000001" green="0.69019607839999997" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -692,10 +798,13 @@ Mission complete!</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXX-Je-5yX">
-                                <rect key="frame" x="134" y="88" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXX-Je-5yX">
+                                <rect key="frame" x="133.5" y="88" width="22" height="22"/>
                                 <color key="backgroundColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="H8N-ge-J3m"/>
+                                    <constraint firstAttribute="height" constant="22" id="hCh-Td-4XN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -704,17 +813,21 @@ Mission complete!</string>
                                 <rect key="frame" x="166" y="530" width="43" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="share"/>
+                                <connections>
+                                    <action selector="sharing:" destination="6nc-w7-h48" eventType="touchUpInside" id="opw-fy-SHw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RYP-NC-JQN" firstAttribute="top" secondItem="IDa-79-q6h" secondAttribute="bottom" constant="21" id="Nhv-J2-uxq"/>
+                            <constraint firstItem="RYP-NC-JQN" firstAttribute="leading" secondItem="T3x-tV-asL" secondAttribute="leading" constant="20" id="gcA-Oq-rRf"/>
+                            <constraint firstItem="QXX-Je-5yX" firstAttribute="leading" secondItem="RYP-NC-JQN" secondAttribute="trailing" constant="6" id="i4P-1w-4uX"/>
+                            <constraint firstItem="QPd-PI-Re1" firstAttribute="top" secondItem="RYP-NC-JQN" secondAttribute="bottom" constant="505" id="nAE-nf-nVm"/>
+                            <constraint firstItem="QXX-Je-5yX" firstAttribute="top" secondItem="IDa-79-q6h" secondAttribute="bottom" constant="24" id="wHc-00-CZc"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Mission" id="ufn-an-kJd">
-                        <barButtonItem key="leftBarButtonItem" title="&lt; home" style="plain" id="0Kb-rO-k0d">
-                            <connections>
-                                <action selector="backToHome:" destination="6nc-w7-h48" id="sFM-q9-KQE"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Mission" id="ufn-an-kJd"/>
                     <connections>
                         <outlet property="bgView" destination="8ED-w4-kjt" id="noZ-gS-shb"/>
                         <outlet property="contentLabel" destination="XwR-Kv-253" id="vpt-rm-33v"/>
@@ -727,7 +840,7 @@ Mission complete!</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sPI-8s-ULL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="c7i-a0-zvh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5732" y="558"/>
+            <point key="canvasLocation" x="6097" y="107"/>
         </scene>
         <!--Mission-->
         <scene sceneID="dUR-Tl-dam">
@@ -808,17 +921,19 @@ Mission complete!</string>
                     <rect key="frame" x="0.0" y="0.0" width="375" height="421"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Samgyepsal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlK-KH-Ij4">
-                            <rect key="frame" x="20" y="21" width="108" height="28"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Samgyepsal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlK-KH-Ij4">
+                            <rect key="frame" x="20" y="21" width="107.5" height="26.5"/>
                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="22"/>
                             <color key="textColor" red="0.20784313730000001" green="0.69019607839999997" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntd-0Y-S03">
-                            <rect key="frame" x="134" y="24" width="22" height="22"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntd-0Y-S03">
+                            <rect key="frame" x="133.5" y="24" width="22" height="22"/>
                             <color key="backgroundColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="3ge-bY-Cbs"/>
+                                <constraint firstAttribute="width" constant="22" id="Jgu-99-w5z"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -850,6 +965,12 @@ Mission complete!</string>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Ntd-0Y-S03" firstAttribute="top" secondItem="cnk-iB-xJB" secondAttribute="top" constant="24" id="Eyd-gj-YLd"/>
+                        <constraint firstItem="SlK-KH-Ij4" firstAttribute="leading" secondItem="cnk-iB-xJB" secondAttribute="leading" constant="20" id="VSV-as-2m7"/>
+                        <constraint firstItem="Ntd-0Y-S03" firstAttribute="leading" secondItem="SlK-KH-Ij4" secondAttribute="trailing" constant="6" id="iHW-UG-v4z"/>
+                        <constraint firstItem="SlK-KH-Ij4" firstAttribute="top" secondItem="cnk-iB-xJB" secondAttribute="top" constant="21" id="zOB-TP-AY0"/>
+                    </constraints>
                 </view>
             </objects>
             <point key="canvasLocation" x="4796" y="559"/>
@@ -883,4 +1004,7 @@ Mission complete!</string>
         <image name="share" width="43" height="43"/>
         <image name="sky" width="480" height="640"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="DOO-q3-nyy"/>
+    </inferredMetricsTieBreakers>
 </document>

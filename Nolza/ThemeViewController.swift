@@ -91,6 +91,13 @@ class ThemeViewController: UIViewController {
     }
 }
 
+extension ThemeViewController: UICollectionViewDelegate{
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "themeMissionSegue", sender: self)
+    }
+}
+
 extension ThemeViewController: UICollectionViewDataSource{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -102,7 +109,6 @@ extension ThemeViewController: UICollectionViewDataSource{
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        print(indexPath.section)
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "themecollectionviewcell", for: indexPath) as? ThemeCollectionViewCell else{
             return UICollectionViewCell()

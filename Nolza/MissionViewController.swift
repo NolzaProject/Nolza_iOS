@@ -108,6 +108,7 @@ extension MissionViewController: FusumaDelegate{
             let destination = segue.destination as! MissionCompleteViewController
             
             destination.receivedImg = sendImage
+            destination.receivedDepartLocation = .Mission
         }
     }
 }
