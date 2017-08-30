@@ -64,7 +64,7 @@ class SettingDurationVC : UIViewController,FSCalendarDelegate,FSCalendarDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.revealNavigationBar()
         let calendar = FSCalendar(frame: CGRect(x: 20, y: 300, width: 320, height: 300))
         calendar.dataSource = self
         calendar.delegate = self
