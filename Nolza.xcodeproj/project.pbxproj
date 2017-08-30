@@ -12,6 +12,8 @@
 		370606DC1ED13F18001289C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370606DA1ED13F18001289C9 /* Main.storyboard */; };
 		370606DE1ED13F18001289C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370606DD1ED13F18001289C9 /* Assets.xcassets */; };
 		370606E11ED13F18001289C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370606DF1ED13F18001289C9 /* LaunchScreen.storyboard */; };
+		3717A8B91F56D9D100233063 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3717A8B81F56D9D100233063 /* MypageViewController.swift */; };
+		3717A8BB1F56E4D800233063 /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3717A8BA1F56E4D800233063 /* EditInfoViewController.swift */; };
 		37239D3C1F1B7EBA00E6B23C /* SettingDurationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37239D3B1F1B7EBA00E6B23C /* SettingDurationVC.swift */; };
 		3751AE881F4EF2D50028652A /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3751AE871F4EF2D50028652A /* JoinViewController.swift */; };
 		3751AE8B1F4F03A90028652A /* ThemeMissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3751AE8A1F4F03A90028652A /* ThemeMissionViewController.swift */; };
@@ -37,6 +39,8 @@
 		370606DD1ED13F18001289C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		370606E01ED13F18001289C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		370606E21ED13F18001289C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3717A8B81F56D9D100233063 /* MypageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
+		3717A8BA1F56E4D800233063 /* EditInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
 		37239D3B1F1B7EBA00E6B23C /* SettingDurationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingDurationVC.swift; sourceTree = "<group>"; };
 		3751AE871F4EF2D50028652A /* JoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		3751AE8A1F4F03A90028652A /* ThemeMissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeMissionViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 		378C96241F5698310050DE55 /* MypageTap */ = {
 			isa = PBXGroup;
 			children = (
+				3717A8B81F56D9D100233063 /* MypageViewController.swift */,
+				3717A8BA1F56E4D800233063 /* EditInfoViewController.swift */,
 			);
 			name = MypageTap;
 			sourceTree = "<group>";
@@ -328,8 +334,10 @@
 				370606D91ED13F18001289C9 /* ViewController.swift in Sources */,
 				3751AE881F4EF2D50028652A /* JoinViewController.swift in Sources */,
 				37E7E1291F49A3C9004746E6 /* ThemeViewController.swift in Sources */,
+				3717A8BB1F56E4D800233063 /* EditInfoViewController.swift in Sources */,
 				37239D3C1F1B7EBA00E6B23C /* SettingDurationVC.swift in Sources */,
 				370606D71ED13F18001289C9 /* AppDelegate.swift in Sources */,
+				3717A8B91F56D9D100233063 /* MypageViewController.swift in Sources */,
 				3751AE951F51A8880028652A /* ThemeCompletedViewController.swift in Sources */,
 				3751AE8B1F4F03A90028652A /* ThemeMissionViewController.swift in Sources */,
 				3751AE931F51A63A0028652A /* CompletedViewController.swift in Sources */,
