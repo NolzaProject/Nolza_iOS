@@ -15,6 +15,7 @@
 		3717A8B91F56D9D100233063 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3717A8B81F56D9D100233063 /* MypageViewController.swift */; };
 		3717A8BB1F56E4D800233063 /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3717A8BA1F56E4D800233063 /* EditInfoViewController.swift */; };
 		3717A8BD1F5726FA00233063 /* LanguageChoiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3717A8BC1F5726FA00233063 /* LanguageChoiceVC.swift */; };
+		3717A8BF1F572E4600233063 /* InterestChoiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3717A8BE1F572E4600233063 /* InterestChoiceVC.swift */; };
 		37239D3C1F1B7EBA00E6B23C /* SettingDurationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37239D3B1F1B7EBA00E6B23C /* SettingDurationVC.swift */; };
 		3751AE881F4EF2D50028652A /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3751AE871F4EF2D50028652A /* JoinViewController.swift */; };
 		3751AE8B1F4F03A90028652A /* ThemeMissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3751AE8A1F4F03A90028652A /* ThemeMissionViewController.swift */; };
@@ -43,6 +44,7 @@
 		3717A8B81F56D9D100233063 /* MypageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		3717A8BA1F56E4D800233063 /* EditInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
 		3717A8BC1F5726FA00233063 /* LanguageChoiceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageChoiceVC.swift; sourceTree = "<group>"; };
+		3717A8BE1F572E4600233063 /* InterestChoiceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestChoiceVC.swift; sourceTree = "<group>"; };
 		37239D3B1F1B7EBA00E6B23C /* SettingDurationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingDurationVC.swift; sourceTree = "<group>"; };
 		3751AE871F4EF2D50028652A /* JoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		3751AE8A1F4F03A90028652A /* ThemeMissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeMissionViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				37239D3B1F1B7EBA00E6B23C /* SettingDurationVC.swift */,
 				3751AE871F4EF2D50028652A /* JoinViewController.swift */,
 				3717A8BC1F5726FA00233063 /* LanguageChoiceVC.swift */,
+				3717A8BE1F572E4600233063 /* InterestChoiceVC.swift */,
 			);
 			name = InitialSetting;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				3751AE911F5139AC0028652A /* Base_Mission.swift in Sources */,
 				3751AE8F1F4FFE170028652A /* MissionCompleteViewController.swift in Sources */,
 				3751AE8D1F4F03C40028652A /* MissionViewController.swift in Sources */,
+				3717A8BF1F572E4600233063 /* InterestChoiceVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
