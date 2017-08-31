@@ -13,8 +13,8 @@
 ***
 
 ### 개발 환경  
-
-![Dashboard 개발 환경](./source/development_env.png)  
+#### IDE - Xcode 8.2.1
+#### 개발언어 - Swift 3.0
 
 ***
 
