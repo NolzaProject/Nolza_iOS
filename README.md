@@ -1,8 +1,6 @@
-# Nolza_dashboard  
+# Nolza_iOS  
 
-<div style="width=10%; height=auto; text-align:center;">
-![Nolza icon](source/Nolza_icon.png)  
-</div>
+<img src="./source/Nolza_icon.png" width="100">
 
 ### Nolza 서비스 소개  
 
