@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		370606D71ED13F18001289C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370606D61ED13F18001289C9 /* AppDelegate.swift */; };
-		370606D91ED13F18001289C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370606D81ED13F18001289C9 /* ViewController.swift */; };
 		370606DC1ED13F18001289C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370606DA1ED13F18001289C9 /* Main.storyboard */; };
 		370606DE1ED13F18001289C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370606DD1ED13F18001289C9 /* Assets.xcassets */; };
 		370606E11ED13F18001289C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370606DF1ED13F18001289C9 /* LaunchScreen.storyboard */; };
@@ -36,7 +35,6 @@
 		07EBDC2409ABAF9685E01957 /* Pods-Nolza.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolza.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nolza/Pods-Nolza.release.xcconfig"; sourceTree = "<group>"; };
 		370606D31ED13F18001289C9 /* Nolza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nolza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		370606D61ED13F18001289C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		370606D81ED13F18001289C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		370606DB1ED13F18001289C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		370606DD1ED13F18001289C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		370606E01ED13F18001289C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 				375525141EFE90FD00994322 /* Login */,
 				375525131EFE90F100994322 /* InitialSetting */,
 				375525121EFE90D600994322 /* TabbarSetting */,
-				370606D81ED13F18001289C9 /* ViewController.swift */,
 			);
 			path = Nolza;
 			sourceTree = "<group>";
@@ -337,7 +334,6 @@
 			files = (
 				378C96261F569E8E0050DE55 /* SearchViewController.swift in Sources */,
 				37B9AFEF1F1A2B3400DFF4D8 /* HomeViewController.swift in Sources */,
-				370606D91ED13F18001289C9 /* ViewController.swift in Sources */,
 				3751AE881F4EF2D50028652A /* JoinViewController.swift in Sources */,
 				37E7E1291F49A3C9004746E6 /* ThemeViewController.swift in Sources */,
 				3717A8BD1F5726FA00233063 /* LanguageChoiceVC.swift in Sources */,

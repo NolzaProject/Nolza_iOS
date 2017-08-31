@@ -38,5 +38,14 @@
     <string>사진 촬영 권한</string>
     <key>NSPhotoLibraryUsageDescription</key>
     <string>포토라이브러리 권한</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>instagram</string>
+    </array>
 </dict>
 </plist>

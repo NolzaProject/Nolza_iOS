@@ -487,6 +487,9 @@
                                 <state key="normal" title="Change profile">
                                     <color key="titleColor" red="0.20784313730000001" green="0.69019607839999997" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeProfile:" destination="y1D-pW-GNZ" eventType="touchUpInside" id="sSj-ve-x55"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3e7-WU-xtk">
                                 <rect key="frame" x="20" y="372" width="335" height="2"/>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DORM
 
 enum DepartLocation{
     case Mission
@@ -31,7 +32,7 @@ class MissionCompleteViewController: Base_Mission {
     
     
     @IBAction func sharing(_ sender: UIButton) {
-        
+        InstagramManager.sharedManager.postImageToInstagramWithCaption(imageInstagram: receivedImg, instagramCaption: "caption", view: self.view)
     }
     
     func backToHome(){
