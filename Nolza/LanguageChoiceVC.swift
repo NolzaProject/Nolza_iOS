@@ -35,6 +35,14 @@ enum Country: String {
     }
 }
 
+struct InitSet{
+    var language = ""
+    var date = ""
+    var name = ""
+    var email = ""
+    var password = ""
+}
+
 class LanguageChoiceVC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -47,13 +55,21 @@ class LanguageChoiceVC: UIViewController {
         }
     }
     
+    var initSet = InitSet()
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.hideNavigationBar()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        
+        if segue.identifier == "languageSegue"
+        {
+            let destination = segue.destination as! SettingDurationVC
+            initSet.language = country[chosenCell].rawValue
+            destination.receivedSet = initSet
+        }
     }
 }
 

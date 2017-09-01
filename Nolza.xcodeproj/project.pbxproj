@@ -28,6 +28,9 @@
 		378C96261F569E8E0050DE55 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378C96251F569E8E0050DE55 /* SearchViewController.swift */; };
 		37B9AFEF1F1A2B3400DFF4D8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9AFEE1F1A2B3400DFF4D8 /* HomeViewController.swift */; };
 		37E7E1291F49A3C9004746E6 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E7E1281F49A3C9004746E6 /* ThemeViewController.swift */; };
+		37ECE6391F593924005B9F8B /* NolzaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ECE6381F593924005B9F8B /* NolzaAPI.swift */; };
+		37ECE63C1F593A2E005B9F8B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ECE63B1F593A2E005B9F8B /* User.swift */; };
+		37ECE63E1F594C2E005B9F8B /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37ECE63D1F594C2E005B9F8B /* Mission.swift */; };
 		FA011B85137B7F50693A5F1D /* Pods_Nolza.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1380F1DDF43D286F1BDD15C /* Pods_Nolza.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +59,9 @@
 		378C96251F569E8E0050DE55 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		37B9AFEE1F1A2B3400DFF4D8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		37E7E1281F49A3C9004746E6 /* ThemeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
+		37ECE6381F593924005B9F8B /* NolzaAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NolzaAPI.swift; sourceTree = "<group>"; };
+		37ECE63B1F593A2E005B9F8B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		37ECE63D1F594C2E005B9F8B /* Mission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		7ED443419796E97BB0CB2E6A /* Pods-Nolza.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nolza.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nolza/Pods-Nolza.debug.xcconfig"; sourceTree = "<group>"; };
 		A1380F1DDF43D286F1BDD15C /* Pods_Nolza.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nolza.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -118,11 +124,13 @@
 		3751AE891F4EFF1E0028652A /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				37ECE63A1F593A22005B9F8B /* Model */,
 				370606DD1ED13F18001289C9 /* Assets.xcassets */,
 				370606DF1ED13F18001289C9 /* LaunchScreen.storyboard */,
 				370606E21ED13F18001289C9 /* Info.plist */,
 				370606D61ED13F18001289C9 /* AppDelegate.swift */,
 				3751AE901F5139AC0028652A /* Base_Mission.swift */,
+				37ECE6381F593924005B9F8B /* NolzaAPI.swift */,
 			);
 			name = Supporting;
 			sourceTree = "<group>";
@@ -198,6 +206,15 @@
 				3717A8BA1F56E4D800233063 /* EditInfoViewController.swift */,
 			);
 			name = MypageTap;
+			sourceTree = "<group>";
+		};
+		37ECE63A1F593A22005B9F8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				37ECE63B1F593A2E005B9F8B /* User.swift */,
+				37ECE63D1F594C2E005B9F8B /* Mission.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		B62448C3DB5F460870FC28E2 /* Frameworks */ = {
@@ -333,15 +350,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				378C96261F569E8E0050DE55 /* SearchViewController.swift in Sources */,
+				37ECE6391F593924005B9F8B /* NolzaAPI.swift in Sources */,
 				37B9AFEF1F1A2B3400DFF4D8 /* HomeViewController.swift in Sources */,
 				3751AE881F4EF2D50028652A /* JoinViewController.swift in Sources */,
 				37E7E1291F49A3C9004746E6 /* ThemeViewController.swift in Sources */,
 				3717A8BD1F5726FA00233063 /* LanguageChoiceVC.swift in Sources */,
 				3717A8BB1F56E4D800233063 /* EditInfoViewController.swift in Sources */,
 				37239D3C1F1B7EBA00E6B23C /* SettingDurationVC.swift in Sources */,
+				37ECE63C1F593A2E005B9F8B /* User.swift in Sources */,
 				370606D71ED13F18001289C9 /* AppDelegate.swift in Sources */,
 				3717A8B91F56D9D100233063 /* MypageViewController.swift in Sources */,
 				3751AE951F51A8880028652A /* ThemeCompletedViewController.swift in Sources */,
+				37ECE63E1F594C2E005B9F8B /* Mission.swift in Sources */,
 				3751AE8B1F4F03A90028652A /* ThemeMissionViewController.swift in Sources */,
 				3751AE931F51A63A0028652A /* CompletedViewController.swift in Sources */,
 				3755250F1EFE8FB200994322 /* TabbarVC.swift in Sources */,

@@ -10,11 +10,27 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    var nolzaAPI : NolzaAPI!
+    
     @IBOutlet weak var themeView: UIView!
 
     @IBOutlet weak var collectionview: UICollectionView!
+    
+    var missions: [Mission] = []{
+        didSet{
+            collectionview.reloadData()
+        }
+    }
+    
+    var sendMission: Mission?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nolzaAPI = NolzaAPI.init(path: "/missions", method: .get)
+        nolzaAPI.getMissions{
+            self.missions = $0
+        }
         
         themeView.frame = CGRect(x: 0, y: -64, width: 375, height: 232)
         collectionview.addSubview(themeView)
@@ -23,12 +39,22 @@ class HomeViewController: UIViewController {
     @IBAction func unwindToMain(_ sender: UIStoryboardSegue) {
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "missionSegue"
+        {
+            let destination = segue.destination as! MissionViewController
+            
+            destination.receivedMission = sendMission
+        }
+    }
 }
 
 extension HomeViewController: UICollectionViewDataSource{
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return missions.count
     }
 
     
@@ -39,9 +65,8 @@ extension HomeViewController: UICollectionViewDataSource{
         }
         
         cell.missionImage.image = UIImage(named:"sky")
-        cell.number.text = "1"
-        cell.missionName.text = "Spicy fried Chicken"
-        
+        cell.number.text = missions[indexPath.item].difficulty ?? ""
+        cell.missionName.text = missions[indexPath.item].title ?? ""
         
         return cell
     }
@@ -50,6 +75,7 @@ extension HomeViewController: UICollectionViewDataSource{
 extension HomeViewController: UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        sendMission = missions[indexPath.item]
         performSegue(withIdentifier: "missionSegue", sender: self)
     }
 }

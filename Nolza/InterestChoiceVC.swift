@@ -11,6 +11,31 @@ import UIKit
 class InterestChoiceVC: UIViewController {
     var chosenButton: [UIButton] = []
     var chosenResult: [String] = []
+    var receivedSet : InitSet?
+    var nolzaAPI : NolzaAPI!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    @IBAction func nextButtonPressed(_ sender: UIButton) {
+     //서버요청 성공하면 performSegue
+        nolzaAPI = NolzaAPI(path: "/users", method: .post, parameters: [
+            "duration": receivedSet?.date ?? "",
+            "email": receivedSet?.email ?? "",
+            "nation": receivedSet?.language ?? "",
+            "password": receivedSet?.password ?? "",
+            "userName": receivedSet?.name ?? ""
+            ])
+        nolzaAPI.requestJoin{
+            print($0)
+        }
+        //performSegue(withIdentifier: "initFinishSegue", sender: self)
+    }
+    
+    @IBAction func skipButtonPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "initFinishSegue", sender: self)
+    }
 }
 
 // @IBAction

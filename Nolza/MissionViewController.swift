@@ -16,6 +16,15 @@ class MissionViewController: Base_Mission {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var sendImage: UIImage!
+    var receivedInfo: [String] = []
+    var receivedMission: Mission?{
+        didSet{
+            receivedInfo.insert(receivedMission?.location ?? "", at: 0)
+            receivedInfo.insert(receivedMission?.businessHour ?? "", at: 1)
+            receivedInfo.insert(receivedMission?.phoneNumber ?? "", at: 2)
+            receivedInfo.insert(receivedMission?.charge ?? "", at: 3)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +35,10 @@ class MissionViewController: Base_Mission {
         line.frame = CGRect(x: 0, y: 358, width: 375, height: 1)
         line.backgroundColor = #colorLiteral(red: 0.9019607843, green: 0.9019607843, blue: 0.9019607843, alpha: 1)
         collectionView.addSubview(line)
+        
+        missionLabel.text = receivedMission?.title ?? ""
+        difficultyLabel.text = receivedMission?.difficulty ?? ""
+        contentLabel.text = receivedMission?.descript ?? ""
     }
 }
 extension MissionViewController: FusumaDelegate{
@@ -125,7 +138,7 @@ extension MissionViewController: UICollectionViewDataSource{
         }
         
         cell.infoImage.image = UIImage(named:"missionIcon\(indexPath.item)")
-        cell.infoLabel.text = "Spicy fried Chicken"
+        cell.infoLabel.text = receivedInfo[indexPath.item]
 
         return cell
     }

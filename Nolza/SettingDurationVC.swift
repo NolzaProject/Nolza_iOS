@@ -62,6 +62,8 @@ class SettingDurationVC : UIViewController,FSCalendarDelegate,FSCalendarDataSour
     var chooseDate : Date?
     var count = 0
     
+    var receivedSet : InitSet?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.revealNavigationBar()
@@ -69,11 +71,12 @@ class SettingDurationVC : UIViewController,FSCalendarDelegate,FSCalendarDataSour
         calendar.dataSource = self
         calendar.delegate = self
         calendar.allowsMultipleSelection = true
-    
+        calendar.currentPage = formatter.date(from: "2018-02-01")!
+        
         view.addSubview(calendar)
         self.calendar = calendar
         
-        }
+    }
     
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
@@ -120,10 +123,15 @@ class SettingDurationVC : UIViewController,FSCalendarDelegate,FSCalendarDataSour
 
             self.calendar.select(day, scrollToDate: false)
         }
-        
-        
     }
     
-    
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "dateSegue"
+        {
+            let destination = segue.destination as! JoinViewController
+            receivedSet?.date = "\(fromDay.text!) - \(toDay.text!), February"
+            destination.receivedSet = receivedSet
+        }
+    }
 }

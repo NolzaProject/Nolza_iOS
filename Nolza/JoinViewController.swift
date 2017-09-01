@@ -9,22 +9,31 @@
 import UIKit
 
 class JoinViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var nameLabel: UITextField!
+    
+    @IBOutlet weak var emailLabel: UITextField!
+    
+    @IBOutlet weak var passwordLabel: UITextField!
+    
+    var receivedSet : InitSet?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "joinSegue"
+        {
+            let destination = segue.destination as! InterestChoiceVC
+            receivedSet?.name = nameLabel.text!
+            receivedSet?.email = emailLabel.text!
+            receivedSet?.password = passwordLabel.text!
+            
+            destination.receivedSet = receivedSet
+        }
     }
-    */
-
 }

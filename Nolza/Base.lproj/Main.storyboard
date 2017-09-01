@@ -133,14 +133,19 @@
                     <navigationItem key="navigationItem" id="fT1-cK-53L">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="kDX-Xl-t8t">
                             <connections>
-                                <segue destination="x44-YM-gsj" kind="showDetail" id="iW3-Za-i89"/>
+                                <segue destination="RMj-aU-ac2" kind="showDetail" identifier="joinSegue" action="showViewController:sender:" id="29M-jT-5tp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailLabel" destination="pYx-vc-p2N" id="LYl-LX-Lwr"/>
+                        <outlet property="nameLabel" destination="M1b-yH-jCs" id="CkI-Ex-W6W"/>
+                        <outlet property="passwordLabel" destination="VGN-ZM-bDf" id="xbD-Jw-VoZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qrV-Rk-DkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1580" y="106.59670164917542"/>
+            <point key="canvasLocation" x="1063" y="107"/>
         </scene>
         <!--Dates-->
         <scene sceneID="tne-QT-ifu">
@@ -217,7 +222,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="wu2-gi-8ZO" kind="show" id="X4q-AJ-Alv"/>
+                                    <segue destination="wu2-gi-8ZO" kind="show" identifier="dateSegue" id="X4q-AJ-Alv"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select your Travel dates." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTa-CA-Kra">
@@ -240,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="807.20000000000005" y="106.59670164917542"/>
+            <point key="canvasLocation" x="295" y="107"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="hJe-s4-4bu">
@@ -949,7 +954,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eh0-S7-bBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4535" y="-626"/>
+            <point key="canvasLocation" x="4658" y="-695"/>
         </scene>
         <!--Theme-->
         <scene sceneID="1Fz-Zj-tub">
@@ -1602,7 +1607,7 @@ Mission complete!</string>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="gfK-Jl-DVi"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="languageSegue" id="gfK-Jl-DVi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1627,7 +1632,7 @@ Mission complete!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fQZ-hA-1Zh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-336.80000000000001" y="106.59670164917542"/>
+            <point key="canvasLocation" x="-500" y="107"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DaP-Jh-m8V">
@@ -1660,13 +1665,13 @@ Mission complete!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please let me know your interest." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGP-x7-gpY">
-                                <rect key="frame" x="20" y="85" width="321" height="27"/>
+                                <rect key="frame" x="20" y="41" width="321" height="27"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqr-Xa-QbE">
-                                <rect key="frame" x="20" y="172" width="119" height="50"/>
+                                <rect key="frame" x="20" y="128" width="119" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="119" id="WwY-Zx-6Fr"/>
                                     <constraint firstAttribute="height" constant="50" id="v3C-8x-N62"/>
@@ -1688,7 +1693,7 @@ Mission complete!</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcb-Ug-xRG">
-                                <rect key="frame" x="151" y="171" width="83" height="50"/>
+                                <rect key="frame" x="151" y="127" width="83" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="83" id="ttr-qP-wSl"/>
                                 </constraints>
@@ -1709,7 +1714,7 @@ Mission complete!</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKH-jI-0ug">
-                                <rect key="frame" x="246" y="170" width="92" height="50"/>
+                                <rect key="frame" x="246" y="126" width="92" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="92" id="ppI-7f-2EX"/>
                                 </constraints>
@@ -1730,7 +1735,7 @@ Mission complete!</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnY-nQ-UAl">
-                                <rect key="frame" x="20" y="234" width="130" height="50"/>
+                                <rect key="frame" x="20" y="190" width="130" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="56m-gU-WxZ"/>
                                 </constraints>
@@ -1751,7 +1756,7 @@ Mission complete!</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhb-MR-DG1">
-                                <rect key="frame" x="162" y="233" width="77" height="50"/>
+                                <rect key="frame" x="162" y="189" width="77" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="77" id="VrF-PY-Hhw"/>
                                 </constraints>
@@ -1785,6 +1790,9 @@ Mission complete!</string>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="28"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="RMj-aU-ac2" eventType="touchUpInside" id="7zW-Rs-bw6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1811,11 +1819,20 @@ Mission complete!</string>
                             <constraint firstItem="rnY-nQ-UAl" firstAttribute="leading" secondItem="oqr-Xa-QbE" secondAttribute="leading" id="ySY-EG-eFO"/>
                         </constraints>
                     </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationItem key="navigationItem" id="9zv-eD-3sm">
+                        <barButtonItem key="rightBarButtonItem" title="Skip" id="gJD-V6-muB">
+                            <connections>
+                                <action selector="skipButtonPressed:" destination="RMj-aU-ac2" id="cSl-CV-2qJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="x44-YM-gsj" kind="presentation" identifier="initFinishSegue" id="n8s-Ej-FJv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xdh-QQ-QcA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-585" y="817"/>
+            <point key="canvasLocation" x="1921" y="107"/>
         </scene>
     </scenes>
     <resources>
