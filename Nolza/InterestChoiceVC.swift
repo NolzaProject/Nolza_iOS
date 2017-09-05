@@ -26,7 +26,7 @@ class InterestChoiceVC: UIViewController {
             "nation": receivedSet?.language ?? "",
             "password": receivedSet?.password ?? "",
             "userName": receivedSet?.name ?? ""
-            ])
+            ], header: ["Content-Type":"application/json"])
         nolzaAPI.requestJoin{
             print($0)
         }

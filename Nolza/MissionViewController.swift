@@ -15,6 +15,8 @@ class MissionViewController: Base_Mission {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var nolzaAPI : NolzaAPI!
+    
     var sendImage: UIImage!
     var receivedInfo: [String] = []
     var receivedMission: Mission?{
@@ -25,9 +27,12 @@ class MissionViewController: Base_Mission {
             receivedInfo.insert(receivedMission?.charge ?? "", at: 3)
         }
     }
+    var receivedImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nolzaAPI = NolzaAPI.init(path: "/usermissions", method: .post, header: ["Content-Type":"multipart/form-data"])
+        
         infoView.frame = CGRect(x: 0, y: -64, width: 375, height: 421)
         collectionView.addSubview(infoView)
         
@@ -39,6 +44,17 @@ class MissionViewController: Base_Mission {
         missionLabel.text = receivedMission?.title ?? ""
         difficultyLabel.text = receivedMission?.difficulty ?? ""
         contentLabel.text = receivedMission?.descript ?? ""
+        photoView.image = receivedImage
+    }
+    
+    func resizing(_ image: UIImage) -> Data?{
+        
+        let resizedWidthImage = image.resized(toWidth: 1080)
+        
+        let resizedData = UIImageJPEGRepresentation(resizedWidthImage!, 0.25)
+        
+        return resizedData
+        
     }
 }
 extension MissionViewController: FusumaDelegate{
@@ -90,7 +106,19 @@ extension MissionViewController: FusumaDelegate{
             print("Called just after dismissed FusumaViewController")
         }
         
-       performSegue(withIdentifier: "completeSegue", sender: self)
+        nolzaAPI.missionUpload(imageData: resizing(image)!, email: "dlrkdls91@naver.com", missionId: 2) {
+            if $0 == 200{
+                self.performSegue(withIdentifier: "completeSegue", sender: self)
+            }else{
+                let alertView = UIAlertController(title: "오류", message: "이미지를 업로드할 수 없습니다.", preferredStyle: UIAlertControllerStyle.alert)
+                alertView.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil))
+                let alertWindow = UIWindow(frame: UIScreen.main.bounds)
+                alertWindow.rootViewController = UIViewController()
+                alertWindow.windowLevel = UIWindowLevelAlert + 1
+                alertWindow.makeKeyAndVisible()
+                alertWindow.rootViewController?.present(alertView, animated: true, completion: nil)
+            }
+        }
     }
     
     func fusumaCameraRollUnauthorized() {
@@ -154,4 +182,21 @@ class MissionCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
+}
+
+extension UIImage {
+    func resized(withPercentage percentage: CGFloat) -> UIImage? {
+        let canvasSize = CGSize(width: size.width * percentage, height: size.height * percentage)
+        UIGraphicsBeginImageContextWithOptions(canvasSize, false, scale)
+        defer { UIGraphicsEndImageContext() }
+        draw(in: CGRect(origin: .zero, size: canvasSize))
+        return UIGraphicsGetImageFromCurrentImageContext()
+    }
+    func resized(toWidth width: CGFloat) -> UIImage? {
+        let canvasSize = CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))
+        UIGraphicsBeginImageContextWithOptions(canvasSize, false, scale)
+        defer { UIGraphicsEndImageContext() }
+        draw(in: CGRect(origin: .zero, size: canvasSize))
+        return UIGraphicsGetImageFromCurrentImageContext()
+    }
 }

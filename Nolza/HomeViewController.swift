@@ -22,7 +22,10 @@ class HomeViewController: UIViewController {
         }
     }
     
+    var photos: [UIImage] = []
+    
     var sendMission: Mission?
+    var sendImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +50,7 @@ class HomeViewController: UIViewController {
             let destination = segue.destination as! MissionViewController
             
             destination.receivedMission = sendMission
+            destination.receivedImage = sendImage
         }
     }
 }
@@ -63,8 +67,11 @@ extension HomeViewController: UICollectionViewDataSource{
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "homecollectionviewcell", for: indexPath) as? HomeCollectionViewCell else{
             return UICollectionViewCell()
         }
+
+        getImageFromWeb(missions[indexPath.item].imageUrl ?? "") {
+            cell.missionImage.image = $0
+        }
         
-        cell.missionImage.image = UIImage(named:"sky")
         cell.number.text = missions[indexPath.item].difficulty ?? ""
         cell.missionName.text = missions[indexPath.item].title ?? ""
         
@@ -76,6 +83,8 @@ extension HomeViewController: UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         sendMission = missions[indexPath.item]
+        let cell = collectionView.cellForItem(at: indexPath) as? HomeCollectionViewCell
+        sendImage = cell?.missionImage.image
         performSegue(withIdentifier: "missionSegue", sender: self)
     }
 }
@@ -98,4 +107,30 @@ class HomeCollectionViewCell: UICollectionViewCell {
         number.layer.cornerRadius = number.width / 2
     }
     
+}
+
+extension HomeViewController {
+    func getImageFromWeb(_ urlString: String, closure: @escaping (UIImage?) -> ()) {
+        guard let url = URL(string: urlString) else {
+            return closure(nil)
+        }
+        let task = URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
+            guard error == nil else {
+                print("error: \(String(describing: error))")
+                return closure(nil)
+            }
+            guard response != nil else {
+                print("no response")
+                return closure(nil)
+            }
+            guard data != nil else {
+                print("no data")
+                return closure(nil)
+            }
+            DispatchQueue.main.async {
+                closure(UIImage(data: data!))
+            }
+        }
+        task.resume()
+    }
 }
