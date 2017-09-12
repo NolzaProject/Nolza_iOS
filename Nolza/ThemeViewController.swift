@@ -20,16 +20,38 @@ class ThemeViewController: UIViewController {
     
     var initialContentOffset = CGPoint()
     
-    var themeModel : [Int] = [1,2,3,4,5,6,7,8]
+    var themeModel: [Int] = [1,2,3,4,5,6,7,8,9]
     
-    var numberOfSection : [Int] = []
+    var numberOfSection: [Int] = []
     
     var hiddenFlag = false
     
+    var nolzaAPI : NolzaAPI!
+    
+    var missions: [Mission] = []{
+        didSet{
+            collectionView.reloadData()
+            var a = -3
+            for _ in 0..<3{
+                a += 3
+                makeArray(start: a, end: a+3)
+            }
+        }
+    }
+    
+    var themeModel2: [[Mission]] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nolzaAPI = NolzaAPI.init(path: "/missions/category/dlrkdls91@naver.com", method: .get, header: ["":""])
+        
+        nolzaAPI.getThemeMissions{
+            //self.missions = $0
+            print($0)
+        }
         sectionArray()
-        print(numberOfSection)
+//        print(numberOfSection)
         labelBackground.layer.masksToBounds = true
         labelBackground.layer.cornerRadius = 17
         
@@ -70,6 +92,17 @@ class ThemeViewController: UIViewController {
         }
     }
     
+    func makeArray(start: Int, end: Int){
+        var arr : [Mission] = []
+        let start = start
+        let end = end
+        
+        for i in start..<end{
+            arr.append(missions[i])
+        }
+        themeModel2.append(arr)
+    }
+    
     func drawLine(){
         var locX = 109
         var locX2 = 231
@@ -94,6 +127,7 @@ class ThemeViewController: UIViewController {
 extension ThemeViewController: UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("###SEction\(indexPath.section)")
         performSegue(withIdentifier: "themeMissionSegue", sender: self)
     }
 }
@@ -105,7 +139,7 @@ extension ThemeViewController: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return numberOfSection[section]
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -113,15 +147,13 @@ extension ThemeViewController: UICollectionViewDataSource{
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "themecollectionviewcell", for: indexPath) as? ThemeCollectionViewCell else{
             return UICollectionViewCell()
         }
-        
+        print("idx : \(indexPath.item)")
+        print("section : \(indexPath.section)")
+        //themeModel[indexPath.section][indexPath.item]
         cell.missionImage.image = UIImage(named:"sky")
         cell.number.text = "1"
         cell.missionName.text = "Spicy fried Chicken"
         
-//        if indexPath.section == numberOfSection.count - 1, indexPath.item > numberOfSection[indexPath.section] - 1, !hiddenFlag {
-//            cell.isHidden = true
-//            hiddenFlag = true
-//        }
         return cell
     }
 }
@@ -147,4 +179,30 @@ class ThemeCollectionViewCell: UICollectionViewCell {
         number.layer.cornerRadius = number.width / 2
     }
     
+}
+
+extension ThemeViewController {
+    func getImageFromWeb(_ urlString: String, closure: @escaping (UIImage?) -> ()) {
+        guard let url = URL(string: urlString) else {
+            return closure(nil)
+        }
+        let task = URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
+            guard error == nil else {
+                print("error: \(String(describing: error))")
+                return closure(nil)
+            }
+            guard response != nil else {
+                print("no response")
+                return closure(nil)
+            }
+            guard data != nil else {
+                print("no data")
+                return closure(nil)
+            }
+            DispatchQueue.main.async {
+                closure(UIImage(data: data!))
+            }
+        }
+        task.resume()
+    }
 }

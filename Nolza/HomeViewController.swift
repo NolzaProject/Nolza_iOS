@@ -71,9 +71,10 @@ extension HomeViewController: UICollectionViewDataSource{
         getImageFromWeb(missions[indexPath.item].imageUrl ?? "") {
             cell.missionImage.image = $0
         }
-        
         cell.number.text = missions[indexPath.item].difficulty ?? ""
-        cell.missionName.text = missions[indexPath.item].title ?? ""
+        let text = missions[indexPath.item].title ?? ""
+        cell.missionName.text = text
+        //cell.missionName.text = text.countChars() > 10 ? text : text + "               "
         
         return cell
     }
@@ -132,5 +133,12 @@ extension HomeViewController {
             }
         }
         task.resume()
+    }
+}
+
+extension String{
+
+    func countChars() -> Int{
+        return self.characters.count
     }
 }

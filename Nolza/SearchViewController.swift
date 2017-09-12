@@ -26,9 +26,17 @@ class SearchViewController: UIViewController {
     
     @IBOutlet var noResultLabel: UILabel!
     
+    var nolzaAPI : NolzaAPI!
+    
+    var missions: [Mission] = []{
+        didSet{
+            collectionView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nolzaAPI = NolzaAPI.init(path: "/missions/description/default", method: .get)
         collectionView.frame = CGRect(x: 0, y: -64, width: 375, height: 682)
         resultCount.frame = CGRect(x: 20, y: 85, width: 98, height: 28)
         noResultLabel.frame = CGRect(x: 151, y: 255, width: 73, height: 22)
@@ -47,11 +55,18 @@ class SearchViewController: UIViewController {
         searchTextField.textAlignment = .left
         if let text = searchTextField.text{
 
-            if text == "case"{
-                setSearchedForm()
-            }else{
-                setSearchingForm()
-            }
+            let path = "/missions/description/"+text
+            nolzaAPI.setPath(path: path)
+            nolzaAPI.searchMission(completion: {
+                if !$0.isEmpty{
+                    self.missions = []
+                    self.missions = $0
+                    self.resultCount.text = "\($0.count) Results"
+                    self.setSearchedForm()
+                }else{
+                    self.setSearchingForm()
+                }
+            })
         }
     }
     
@@ -77,7 +92,7 @@ class SearchViewController: UIViewController {
         noResultLabel.isHidden = true
         collectionView.isHidden = false
         collectionView.backgroundColor = #colorLiteral(red: 0.9215686275, green: 0.9215686275, blue: 0.9215686275, alpha: 1)
-        collectionView.reloadData()
+//        collectionView.reloadData()
     }
     
     @IBAction func cancelButtonPressed(){
@@ -102,7 +117,7 @@ extension SearchViewController: UICollectionViewDelegate{
 extension SearchViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return missions.count
     }
     
     
@@ -112,11 +127,39 @@ extension SearchViewController: UICollectionViewDataSource{
             return UICollectionViewCell()
         }
         
-        cell.missionImage.image = UIImage(named:"sky")
-        cell.number.text = "1"
-        cell.missionName.text = "Spicy fried Chicken"
+        getImageFromWeb(missions[indexPath.item].imageUrl ?? "") {
+            cell.missionImage.image = $0
+        }//UIImage(named:"sky")
+        cell.number.text = missions[indexPath.item].difficulty ?? "" //"1"
+        cell.missionName.text = missions[indexPath.item].title ?? "" //"Spicy fried Chicken"
         
         
         return cell
+    }
+}
+
+extension SearchViewController{
+    func getImageFromWeb(_ urlString: String, closure: @escaping (UIImage?) -> ()) {
+        guard let url = URL(string: urlString) else {
+            return closure(nil)
+        }
+        let task = URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
+            guard error == nil else {
+                print("error: \(String(describing: error))")
+                return closure(nil)
+            }
+            guard response != nil else {
+                print("no response")
+                return closure(nil)
+            }
+            guard data != nil else {
+                print("no data")
+                return closure(nil)
+            }
+            DispatchQueue.main.async {
+                closure(UIImage(data: data!))
+            }
+        }
+        task.resume()
     }
 }

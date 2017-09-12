@@ -26,6 +26,10 @@ class NolzaAPI {
         self.header = header
     }
     
+    func setPath(path: String){
+        url = server + path
+    }
+    
     func requestJoin(completion : @escaping (JSON)->Void){
         
         Alamofire.request(url, method: method, parameters: parameters, headers: header).responseJSON{ response in
@@ -52,7 +56,65 @@ class NolzaAPI {
                     
                     var missions = [Mission]()
                     let contents = resp["result"]
-                    print(contents)
+//                    print(contents)
+                    for idx in 0..<contents.count {
+                        
+                        let content = Mission(businessHour: contents[idx]["businessHour"].stringValue, charge: contents[idx]["charge"].stringValue, descript: contents[idx]["description"].stringValue, difficulty: contents[idx]["difficulty"].stringValue, id: contents[idx]["id"].intValue, imageUrl: contents[idx]["imageUrl"].stringValue, location: contents[idx]["location"].stringValue, phoneNumber: contents[idx]["phoneNumber"].stringValue, title: contents[idx]["title"].stringValue)
+                        
+                        missions += [content]
+                    }
+                    completion(missions)
+                }
+                break
+                
+            case .failure(_):
+                break
+                
+            }
+        }
+    }
+    
+    func getThemeMissions(completion : @escaping ([Mission])->Void){
+        Alamofire.request(url,method: method,parameters: parameters,encoding: encode, headers: header).responseJSON{ response in
+            switch(response.result) {
+                
+            case .success(_):
+                if let json = response.result.value{
+                    let resp = JSON(json)
+                    print(resp)
+                    
+                    var missions = [Mission]()
+                    let contents = resp["result"]["missionResponses"]
+                    print(contents.count)
+                    for idx in 0..<contents.count {
+                        
+                        let content = Mission(businessHour: contents[idx]["businessHour"].stringValue, charge: contents[idx]["charge"].stringValue, descript: contents[idx]["description"].stringValue, difficulty: contents[idx]["difficulty"].stringValue, id: contents[idx]["id"].intValue, imageUrl: contents[idx]["imageUrl"].stringValue, location: contents[idx]["location"].stringValue, phoneNumber: contents[idx]["phoneNumber"].stringValue, title: contents[idx]["title"].stringValue)
+                        
+                        missions += [content]
+                    }
+                    completion(missions)
+                }
+                break
+                
+            case .failure(_):
+                break
+                
+            }
+        }
+    }
+
+    
+    func searchMission(completion : @escaping ([Mission])->Void){
+        Alamofire.request(url,method: method,parameters: parameters,encoding: encode, headers: header).responseJSON{ response in
+            switch(response.result) {
+                
+            case .success(_):
+                if let json = response.result.value{
+                    let resp = JSON(json)
+                    
+                    var missions = [Mission]()
+                    let contents = resp["result"]
+
                     for idx in 0..<contents.count {
                         
                         let content = Mission(businessHour: contents[idx]["businessHour"].stringValue, charge: contents[idx]["charge"].stringValue, descript: contents[idx]["description"].stringValue, difficulty: contents[idx]["difficulty"].stringValue, id: contents[idx]["id"].intValue, imageUrl: contents[idx]["imageUrl"].stringValue, location: contents[idx]["location"].stringValue, phoneNumber: contents[idx]["phoneNumber"].stringValue, title: contents[idx]["title"].stringValue)
