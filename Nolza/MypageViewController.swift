@@ -30,6 +30,8 @@ class MypageViewController: UIViewController {
         
         photoView.layer.masksToBounds = true
         photoView.layer.cornerRadius = photoView.width / 2
+        photoView.layer.borderWidth = 0.5
+        photoView.layer.borderColor = UIColor.lightGray.cgColor
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -48,7 +50,7 @@ extension MypageViewController: UICollectionViewDataSource{
             return UICollectionViewCell()
         }
         
-        cell.couponImage.image = UIImage(named:"sky")
+        cell.couponImage.image = UIImage(named:"group\(indexPath.item + 1)")
         
         return cell
     }

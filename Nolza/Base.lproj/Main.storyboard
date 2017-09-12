@@ -216,7 +216,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wC3-by-6Vp">
                                 <rect key="frame" x="48" y="617" width="268" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.60392156862745094" green="0.84313725490196079" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.20784313725490194" green="0.69019607843137254" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -239,6 +239,7 @@
                     <connections>
                         <outlet property="fromDay" destination="Drt-qa-qdH" id="a5g-sC-0eP"/>
                         <outlet property="fromWeekDay" destination="AED-Jy-Ws6" id="q20-BG-tmx"/>
+                        <outlet property="nextButton" destination="wC3-by-6Vp" id="DVO-LT-5bR"/>
                         <outlet property="toDay" destination="qwB-eZ-rQo" id="fkT-rL-Tba"/>
                         <outlet property="toWeekDay" destination="Oei-Fd-Xrv" id="eMx-re-yJO"/>
                     </connections>
@@ -452,7 +453,7 @@
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="brU-IP-teD">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="brU-IP-teD">
                             <rect key="frame" x="102" y="41" width="171" height="171"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -481,7 +482,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="2nn-HF-BPg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="2nn-HF-BPg">
                                 <rect key="frame" x="102" y="105" width="171" height="171"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -513,7 +514,7 @@
                                         <rect key="frame" x="0.0" y="1" width="335" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TLb-Fj-4II" id="ayv-bD-YxT">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Language" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvi-Fy-Slb">
@@ -570,7 +571,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit" id="ebw-ct-7BR">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="T9v-FA-dSY">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="T9v-FA-dSY">
                             <connections>
                                 <action selector="doneButtonPressed:" destination="y1D-pW-GNZ" id="loq-aH-btA"/>
                             </connections>
@@ -1842,6 +1843,7 @@ Mission complete!</string>
         <image name="home" width="30" height="27"/>
         <image name="missionIcon3" width="24" height="18"/>
         <image name="mypage" width="30" height="27"/>
+        <image name="profile" width="235" height="227"/>
         <image name="search" width="30" height="27"/>
         <image name="share" width="43" height="43"/>
         <image name="sky" width="480" height="640"/>

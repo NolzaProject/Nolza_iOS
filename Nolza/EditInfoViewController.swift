@@ -25,6 +25,8 @@ class EditInfoViewController: UIViewController {
         super.viewDidLoad()
         photoView.layer.masksToBounds = true
         photoView.layer.cornerRadius = photoView.width / 2
+        photoView.layer.borderWidth = 0.5
+        photoView.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {

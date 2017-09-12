@@ -44,6 +44,7 @@ class SearchViewController: UIViewController {
     
     func textValueChanged(){
         //값들어올때마다 서버요청함
+        searchTextField.textAlignment = .left
         if let text = searchTextField.text{
 
             if text == "case"{
@@ -55,6 +56,7 @@ class SearchViewController: UIViewController {
     }
     
     func setBasicForm(){
+        searchTextField.textAlignment = .center
         searchTextField.frame.size = CGSize(width: 343, height: 30)
         cancelButton.isHidden = true
         collectionView.isHidden = true

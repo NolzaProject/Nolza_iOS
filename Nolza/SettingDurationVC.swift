@@ -49,6 +49,8 @@ class SettingDurationVC : UIViewController,FSCalendarDelegate,FSCalendarDataSour
     @IBOutlet weak var fromWeekDay: UILabel!
     @IBOutlet weak var toWeekDay: UILabel!
 
+    @IBOutlet weak var nextButton: UIButton!
+    
     fileprivate let gregorian = Calendar(identifier: .gregorian)
     fileprivate let formatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -66,6 +68,9 @@ class SettingDurationVC : UIViewController,FSCalendarDelegate,FSCalendarDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextButton.clipsToBounds = true
+        nextButton.layer.cornerRadius = 15
+        
         self.navigationController?.revealNavigationBar()
         let calendar = FSCalendar(frame: CGRect(x: 20, y: 300, width: 320, height: 300))
         calendar.dataSource = self
