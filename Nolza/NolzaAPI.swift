@@ -74,7 +74,7 @@ class NolzaAPI {
         }
     }
     
-    func getThemeMissions(completion : @escaping ([Mission])->Void){
+    func getThemeMissions(themeTitle : @escaping ([String])->Void, completion : @escaping ([Mission])->Void){
         Alamofire.request(url,method: method,parameters: parameters,encoding: encode, headers: header).responseJSON{ response in
             switch(response.result) {
                 
@@ -84,8 +84,18 @@ class NolzaAPI {
                     print(resp)
                     
                     var missions = [Mission]()
+                    var themeTitles = [String]()
+                    
                     let contents = resp["result"]["missionResponses"]
-                    print(contents.count)
+                    let titles = resp["result"]["categoryTitles"]
+                    
+                    for idx in 0..<titles.count{
+                        let title = titles[idx].stringValue
+                        
+                        themeTitles += [title]
+                    }
+                    themeTitle(themeTitles)
+                    
                     for idx in 0..<contents.count {
                         
                         let content = Mission(businessHour: contents[idx]["businessHour"].stringValue, charge: contents[idx]["charge"].stringValue, descript: contents[idx]["description"].stringValue, difficulty: contents[idx]["difficulty"].stringValue, id: contents[idx]["id"].intValue, imageUrl: contents[idx]["imageUrl"].stringValue, location: contents[idx]["location"].stringValue, phoneNumber: contents[idx]["phoneNumber"].stringValue, title: contents[idx]["title"].stringValue)

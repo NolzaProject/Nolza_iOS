@@ -27,18 +27,33 @@ class ThemeMissionViewController: Base_Mission {
     
     var pressedItemNumber: Int = 0
     
+    var receivedMissions: [Mission] = []
+    var receivedImages: [UIImage] = []
+    var receivedTitle: String = ""
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         scrollView.contentSize = CGSize(width: 375, height: 700)
         
+        titleLabel.text = receivedTitle
+        
+        item1.setImage(receivedImages[0], for: .normal)
         item1.layer.masksToBounds = true
         item1.layer.cornerRadius = item1.width / 2
         item1.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        missionLabel.text = receivedMissions[0].title
+        difficultyLabel.text = receivedMissions[0].difficulty
+        contentLabel.text = receivedMissions[0].descript
+        photoView.image = receivedImages[0]
         
+        item2.setImage(receivedImages[1], for: .normal)
         item2.layer.masksToBounds = true
         item2.layer.cornerRadius = item2.width / 2
         
+        item3.setImage(receivedImages[2], for: .normal)
         item3.layer.masksToBounds = true
         item3.layer.cornerRadius = item3.width / 2
         
@@ -47,16 +62,29 @@ class ThemeMissionViewController: Base_Mission {
         line.backgroundColor = #colorLiteral(red: 0.9019607843, green: 0.9019607843, blue: 0.9019607843, alpha: 1)
         scrollView.addSubview(line)
         
+//        if CompleteCheck.themeMissionCheck{
+//            checkButton.setImage(#imageLiteral(resourceName: "icnDone"), for: .normal)
+//        }
+//        print("$$$##ID: \(receivedMissions[1].id)")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if CompleteCheck.themeMissionCheck, pressedItemNumber == 1, receivedMissions[1].id == 5{
+            checkButton.setImage(#imageLiteral(resourceName: "icnDone"), for: .normal)
+        }else{
+            checkButton.setImage(#imageLiteral(resourceName: "camera"), for: .normal)
+        }
+    }
     //각각 아이템의 상태에따라 UI 변경
     @IBAction func item1Pressed(_ sender: UIButton) {
         removeAllTransform()
         UIView.animate(withDuration: 0.5) {
             self.item1.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         }
-        pressedItemNumber = 1
-        
+        pressedItemNumber = 0
+        changeData(number: 0)
     }
     
     @IBAction func item2Pressed(_ sender: UIButton) {
@@ -64,7 +92,8 @@ class ThemeMissionViewController: Base_Mission {
         UIView.animate(withDuration: 0.5) {
             self.item2.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         }
-        pressedItemNumber = 2
+        pressedItemNumber = 1
+        changeData(number: 1)
     }
     
     @IBAction func item3Pressed(_ sender: UIButton) {
@@ -72,13 +101,28 @@ class ThemeMissionViewController: Base_Mission {
         UIView.animate(withDuration: 0.5) {
             self.item3.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         }
-        pressedItemNumber = 3
+        pressedItemNumber = 2
+        changeData(number: 2)
     }
     
     func removeAllTransform(){
         self.item1.transform = .identity
         self.item2.transform = .identity
         self.item3.transform = .identity
+    }
+    
+    func changeData(number: Int){
+        missionLabel.text = receivedMissions[number].title
+        difficultyLabel.text = receivedMissions[number].difficulty
+        contentLabel.text = receivedMissions[number].descript
+        photoView.image = receivedImages[number]
+        
+        if CompleteCheck.themeMissionCheck, number == 1, receivedMissions[number].id == 5{
+            checkButton.setImage(#imageLiteral(resourceName: "icnDone"), for: .normal)
+        }else{
+            checkButton.setImage(#imageLiteral(resourceName: "camera"), for: .normal)
+            
+        }
     }
 }
 
@@ -162,8 +206,37 @@ extension ThemeMissionViewController: FusumaDelegate{
             let destination = segue.destination as! MissionCompleteViewController
             
             destination.receivedImg = sendImage
+            destination.receivedTitle = receivedMissions[pressedItemNumber].title ?? ""
+            destination.receivedDifficulty = receivedMissions[pressedItemNumber].difficulty ?? ""
             destination.receivedDepartLocation = .ThemeMission
         }
     }
 }
+
+extension ThemeMissionViewController {
+    func getImageFromWeb(_ urlString: String, closure: @escaping (UIImage?) -> ()) {
+        guard let url = URL(string: urlString) else {
+            return closure(nil)
+        }
+        let task = URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
+            guard error == nil else {
+                print("error: \(String(describing: error))")
+                return closure(nil)
+            }
+            guard response != nil else {
+                print("no response")
+                return closure(nil)
+            }
+            guard data != nil else {
+                print("no data")
+                return closure(nil)
+            }
+            DispatchQueue.main.async {
+                closure(UIImage(data: data!))
+            }
+        }
+        task.resume()
+    }
+}
+
 

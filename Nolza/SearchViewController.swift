@@ -34,6 +34,9 @@ class SearchViewController: UIViewController {
         }
     }
     
+    var sendMission: Mission?
+    var sendImage: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nolzaAPI = NolzaAPI.init(path: "/missions/description/default", method: .get)
@@ -100,6 +103,17 @@ class SearchViewController: UIViewController {
         searchTextField.text = ""
         searchTextField.endEditing(true)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "searchToMissionSegue"
+        {
+            let destination = segue.destination as! MissionViewController
+            
+            destination.receivedMission = sendMission
+            destination.receivedImage = sendImage
+        }
+    }
 }
 extension SearchViewController: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -109,8 +123,12 @@ extension SearchViewController: UITextFieldDelegate{
 }
 
 extension SearchViewController: UICollectionViewDelegate{
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("No.\(indexPath.item)")
+        sendMission = missions[indexPath.item]
+        let cell = collectionView.cellForItem(at: indexPath) as? HomeCollectionViewCell
+        sendImage = cell?.missionImage.image
+        performSegue(withIdentifier: "searchToMissionSegue", sender: self)
     }
 }
 

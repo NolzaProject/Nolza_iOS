@@ -15,6 +15,8 @@ class MissionViewController: Base_Mission {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var checkButton: UIButton!
+    
     var nolzaAPI : NolzaAPI!
     
     var sendImage: UIImage!
@@ -45,6 +47,15 @@ class MissionViewController: Base_Mission {
         difficultyLabel.text = receivedMission?.difficulty ?? ""
         contentLabel.text = receivedMission?.descript ?? ""
         photoView.image = receivedImage
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if CompleteCheck.missionCheck, receivedMission?.id! == 2{
+            checkButton.setImage(#imageLiteral(resourceName: "icnDone"), for: .normal)
+        }
     }
     
     func resizing(_ image: UIImage) -> Data?{
@@ -106,19 +117,20 @@ extension MissionViewController: FusumaDelegate{
             print("Called just after dismissed FusumaViewController")
         }
         
-        nolzaAPI.missionUpload(imageData: resizing(image)!, email: "dlrkdls91@naver.com", missionId: 2) {
-            if $0 == 200{
-                self.performSegue(withIdentifier: "completeSegue", sender: self)
-            }else{
-                let alertView = UIAlertController(title: "오류", message: "이미지를 업로드할 수 없습니다.", preferredStyle: UIAlertControllerStyle.alert)
-                alertView.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil))
-                let alertWindow = UIWindow(frame: UIScreen.main.bounds)
-                alertWindow.rootViewController = UIViewController()
-                alertWindow.windowLevel = UIWindowLevelAlert + 1
-                alertWindow.makeKeyAndVisible()
-                alertWindow.rootViewController?.present(alertView, animated: true, completion: nil)
-            }
-        }
+//        nolzaAPI.missionUpload(imageData: resizing(image)!, email: "dlrkdls91@naver.com", missionId: 2) {
+//            if $0 == 200{
+//                self.performSegue(withIdentifier: "completeSegue", sender: self)
+//            }else{
+//                let alertView = UIAlertController(title: "오류", message: "이미지를 업로드할 수 없습니다.", preferredStyle: UIAlertControllerStyle.alert)
+//                alertView.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil))
+//                let alertWindow = UIWindow(frame: UIScreen.main.bounds)
+//                alertWindow.rootViewController = UIViewController()
+//                alertWindow.windowLevel = UIWindowLevelAlert + 1
+//                alertWindow.makeKeyAndVisible()
+//                alertWindow.rootViewController?.present(alertView, animated: true, completion: nil)
+//            }
+//        }
+        self.performSegue(withIdentifier: "completeSegue", sender: self)
     }
     
     func fusumaCameraRollUnauthorized() {
@@ -150,6 +162,8 @@ extension MissionViewController: FusumaDelegate{
             
             destination.receivedImg = sendImage
             destination.receivedDepartLocation = .Mission
+            destination.receivedTitle = missionLabel.text ?? ""
+            destination.receivedDifficulty = difficultyLabel.text ?? ""
         }
     }
 }

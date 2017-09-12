@@ -8,6 +8,11 @@
 
 import UIKit
 
+class CompleteCheck{
+    static var themeMissionCheck = false
+    static var missionCheck = false
+}
+
 class ThemeViewController: UIViewController {
 
     @IBOutlet weak var backgroundView: UIView!
@@ -18,9 +23,9 @@ class ThemeViewController: UIViewController {
     
     @IBOutlet weak var pageControl: UIPageControl!
     
-    var initialContentOffset = CGPoint()
+    @IBOutlet weak var titleLabel: UILabel!
     
-    var themeModel: [Int] = [1,2,3,4,5,6,7,8,9]
+    var initialContentOffset = CGPoint()
     
     var numberOfSection: [Int] = []
     
@@ -30,28 +35,44 @@ class ThemeViewController: UIViewController {
     
     var missions: [Mission] = []{
         didSet{
-            collectionView.reloadData()
             var a = -3
             for _ in 0..<3{
                 a += 3
                 makeArray(start: a, end: a+3)
             }
+            sectionArray()
+            print(numberOfSection)
+            collectionView.reloadData()
+        }
+    }
+    var themeTitles: [String] = []{
+        didSet{
+            titleLabel.text = themeTitles[0]
         }
     }
     
-    var themeModel2: [[Mission]] = []
+    var themeModel: [[Mission]] = []
+    
+    var sendMissions: [Mission] = []
+    var sendImages: [UIImage] = []
+    var sendTitle = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nolzaAPI = NolzaAPI.init(path: "/missions/category/dlrkdls91@naver.com", method: .get, header: ["":""])
+        nolzaAPI = NolzaAPI.init(path: "/missions/category/default", method: .get, header: ["":""])
         
-        nolzaAPI.getThemeMissions{
-            //self.missions = $0
-            print($0)
+//        nolzaAPI.getThemeMissions{
+//            self.themeTitles = $0
+//            //self.missions = $1
+//        }
+        
+        nolzaAPI.getThemeMissions(themeTitle: { (titles) in
+            self.themeTitles = titles
+        }) { (missions) in
+            self.missions = missions
         }
-        sectionArray()
-//        print(numberOfSection)
+
         labelBackground.layer.masksToBounds = true
         labelBackground.layer.cornerRadius = 17
         
@@ -76,20 +97,23 @@ class ThemeViewController: UIViewController {
         } else if collectionView.contentOffset.x < self.initialContentOffset.x{
             pageControl.currentPage -= 1
         }
+        
+        titleLabel.text = themeTitles[pageControl.currentPage]
     }
     
     func sectionArray(){
     
-        let result = themeModel.count % 3 == 0 ? themeModel.count / 3 : themeModel.count / 3 + 1
-        
-        for i in 0..<result {
-            
-            if i == themeModel.count / 3, themeModel.count % 3 != 0{
-                self.numberOfSection.append(themeModel.count % 3)
-            }else{
-                self.numberOfSection.append(3)
-            }
-        }
+//        let result = themeModel.count % 3 == 0 ? themeModel.count / 3 : themeModel.count / 3 + 1
+//        
+//        for i in 0..<result {
+//            
+//            if i == themeModel.count / 3, themeModel.count % 3 != 0{
+//                self.numberOfSection.append(themeModel.count % 3)
+//            }else{
+//                self.numberOfSection.append(3)
+//            }
+//        }
+        numberOfSection = [3,3,3]
     }
     
     func makeArray(start: Int, end: Int){
@@ -100,7 +124,7 @@ class ThemeViewController: UIViewController {
         for i in start..<end{
             arr.append(missions[i])
         }
-        themeModel2.append(arr)
+        themeModel.append(arr)
     }
     
     func drawLine(){
@@ -122,12 +146,48 @@ class ThemeViewController: UIViewController {
             locX2 += 375 - i
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "themeMissionSegue"
+        {
+            let destination = segue.destination as! ThemeMissionViewController
+            
+            destination.receivedMissions = sendMissions
+            destination.receivedImages = sendImages
+            destination.receivedTitle = sendTitle
+        }
+    }
 }
 
 extension ThemeViewController: UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("###SEction\(indexPath.section)")
+        sendMissions = themeModel[indexPath.section]
+        
+        let cell = collectionView.visibleCells.map{
+            $0 as! ThemeCollectionViewCell
+        }
+        switch indexPath.section {
+        case 0:
+            sendImages.insert(cell[0].missionImage.image!, at: 0)
+            sendImages.insert(cell[1].missionImage.image!, at: 1)
+            sendImages.insert(cell[2].missionImage.image ?? UIImage(named:"sky")!, at: 2)
+            sendTitle = themeTitles[0]
+        case 1:
+            sendImages.insert(cell[1].missionImage.image!, at: 0)
+            sendImages.insert(cell[2].missionImage.image!, at: 1)
+            sendImages.insert(cell[0].missionImage.image!, at: 2)
+            sendTitle = themeTitles[1]
+        case 2:
+            sendImages.insert(cell[0].missionImage.image!, at: 0)
+            sendImages.insert(cell[1].missionImage.image!, at: 1)
+            sendImages.insert(cell[2].missionImage.image!, at: 2)
+            sendTitle = themeTitles[2]
+        default:
+            return
+        }
+        
         performSegue(withIdentifier: "themeMissionSegue", sender: self)
     }
 }
@@ -147,12 +207,14 @@ extension ThemeViewController: UICollectionViewDataSource{
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "themecollectionviewcell", for: indexPath) as? ThemeCollectionViewCell else{
             return UICollectionViewCell()
         }
-        print("idx : \(indexPath.item)")
-        print("section : \(indexPath.section)")
-        //themeModel[indexPath.section][indexPath.item]
-        cell.missionImage.image = UIImage(named:"sky")
-        cell.number.text = "1"
-        cell.missionName.text = "Spicy fried Chicken"
+//        print("idx : \(indexPath.item)")
+//        print("section : \(indexPath.section)")
+        
+        getImageFromWeb(themeModel[indexPath.section][indexPath.item].imageUrl ?? "") {
+            cell.missionImage.image = $0
+        }
+        cell.number.text = themeModel[indexPath.section][indexPath.item].difficulty ?? ""
+        cell.missionName.text = themeModel[indexPath.section][indexPath.item].title ?? ""
         
         return cell
     }

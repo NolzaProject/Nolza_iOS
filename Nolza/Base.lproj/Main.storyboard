@@ -278,7 +278,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="144"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aa8-df-xyL">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aa8-df-xyL">
                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -353,6 +353,7 @@
                         <outlet property="noResultLabel" destination="80K-CW-U3b" id="Pwl-xm-C56"/>
                         <outlet property="resultCount" destination="8zg-vK-BBL" id="5Ln-Yo-8xE"/>
                         <outlet property="searchTextField" destination="Epm-Nd-dg2" id="6iL-wO-K5a"/>
+                        <segue destination="38m-Bd-16L" kind="show" identifier="searchToMissionSegue" id="Q6F-Nv-71A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tyM-U5-V68" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -733,7 +734,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="144"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g4F-Z6-Ac4">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g4F-Z6-Ac4">
                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -875,7 +876,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="144"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dRb-2f-55t">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dRb-2f-55t">
                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -950,6 +951,7 @@
                         <outlet property="collectionView" destination="Lom-WF-Pmm" id="KFg-Ws-sex"/>
                         <outlet property="labelBackground" destination="sIM-89-lKB" id="PFd-I9-31Z"/>
                         <outlet property="pageControl" destination="bVZ-q9-cHc" id="2ym-Qd-9x9"/>
+                        <outlet property="titleLabel" destination="AtX-NR-Vll" id="5b7-mf-zGv"/>
                         <segue destination="iIm-sp-Hiu" kind="show" identifier="themeMissionSegue" id="NSm-WB-HuK"/>
                     </connections>
                 </viewController>
@@ -973,7 +975,7 @@
                                 <rect key="frame" x="0.0" y="-44" width="375" height="711"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Korean food" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHO-LJ-Olf">
-                                        <rect key="frame" x="20" y="21" width="113" height="28"/>
+                                        <rect key="frame" x="20" y="21" width="300" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="22"/>
                                         <nil key="textColor"/>
@@ -985,7 +987,7 @@
                                         <color key="textColor" red="0.20784313730000001" green="0.69019607839999997" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="pv7-uB-uye">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="pv7-uB-uye">
                                         <rect key="frame" x="87" y="360" width="200" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -1003,7 +1005,7 @@ A detailed description of the theme will be entered.</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wv-Z4-nOG">
+                                    <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wv-Z4-nOG">
                                         <rect key="frame" x="20" y="73" width="79" height="79"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="sky"/>
@@ -1011,7 +1013,7 @@ A detailed description of the theme will be entered.</string>
                                             <action selector="item1Pressed:" destination="iIm-sp-Hiu" eventType="touchUpInside" id="abZ-SB-KQD"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeE-EJ-tLp">
+                                    <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeE-EJ-tLp">
                                         <rect key="frame" x="276" y="73" width="79" height="79"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="sky"/>
@@ -1019,7 +1021,7 @@ A detailed description of the theme will be entered.</string>
                                             <action selector="item3Pressed:" destination="iIm-sp-Hiu" eventType="touchUpInside" id="eXr-UZ-ixB"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPo-sj-w1U">
+                                    <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPo-sj-w1U">
                                         <rect key="frame" x="148" y="73" width="79" height="79"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="sky"/>
@@ -1160,7 +1162,7 @@ A detailed description of the theme will be entered.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="wxC-HC-uhW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="wxC-HC-uhW">
                                 <rect key="frame" x="59" y="133" width="253" height="253"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1293,6 +1295,7 @@ Mission complete!</string>
                     <navigationItem key="navigationItem" title="Mission" id="q3j-kD-YI8"/>
                     <connections>
                         <outlet property="bgView" destination="ReF-E0-0Lf" id="wId-9r-AEY"/>
+                        <outlet property="checkButton" destination="JHP-ez-25a" id="UDB-BQ-7sY"/>
                         <outlet property="collectionView" destination="k7X-Rv-ZIb" id="jEI-J4-5m3"/>
                         <outlet property="contentLabel" destination="9rV-Xt-2V1" id="1ON-9W-5sF"/>
                         <outlet property="difficultyLabel" destination="Ntd-0Y-S03" id="djv-MM-q4A"/>
@@ -1324,7 +1327,7 @@ Mission complete!</string>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="rC1-4g-hOn">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="rC1-4g-hOn">
                             <rect key="frame" x="87" y="69" width="200" height="200"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -1849,6 +1852,7 @@ Mission complete!</string>
         <image name="sky" width="480" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="u6w-Ph-orp"/>
         <segue reference="TMA-1w-ixU"/>
     </inferredMetricsTieBreakers>
 </document>

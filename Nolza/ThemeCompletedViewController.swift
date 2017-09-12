@@ -80,7 +80,7 @@ extension ThemeCompletedCell: UICollectionViewDataSource{
         
         cell.missionImage.image = UIImage(named:"sky")
         cell.missionImage.layer.borderColor = #colorLiteral(red: 0.6078431373, green: 0.6078431373, blue: 0.6078431373, alpha: 1).cgColor
-        cell.number.text = "1"
+        cell.number.text = "\(indexPath.item)"
         cell.missionName.text = "Spicy fried Chicken"
         
         return cell
