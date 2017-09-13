@@ -31,8 +31,6 @@ class ThemeMissionViewController: Base_Mission {
     var receivedImages: [UIImage] = []
     var receivedTitle: String = ""
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

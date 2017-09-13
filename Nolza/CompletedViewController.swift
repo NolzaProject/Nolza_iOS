@@ -16,8 +16,21 @@ class CompletedViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
     
+    var nolzaAPI : NolzaAPI!
+    
+    var missions: [Mission] = []{
+        didSet{
+            collectionView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        nolzaAPI = NolzaAPI.init(path: "/missions/description/d", method: .get)
+        nolzaAPI.searchMission {
+            self.missions = $0
+        }
+        
         containerView.alpha = 1
         collectionView.alpha = 0
     }
@@ -43,7 +56,7 @@ class CompletedViewController: UIViewController {
 extension CompletedViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return missions.count
     }
     
     
@@ -53,13 +66,41 @@ extension CompletedViewController: UICollectionViewDataSource{
             return UICollectionViewCell()
         }
         
-        cell.missionImage.image = UIImage(named:"sky")
         cell.missionImage.layer.borderWidth = 2
         cell.missionImage.layer.borderColor = #colorLiteral(red: 0.6078431373, green: 0.6078431373, blue: 0.6078431373, alpha: 1).cgColor
-        cell.number.text = "1"
-        cell.missionName.text = "Spicy fried Chicken"
+        getImageFromWeb(missions[indexPath.item].imageUrl ?? "") {
+            cell.missionImage.image = $0
+        }
+        cell.number.text = missions[indexPath.item].difficulty ?? ""
+        cell.missionName.text = missions[indexPath.item].title ?? ""
         
         
         return cell
+    }
+}
+
+extension CompletedViewController{
+    func getImageFromWeb(_ urlString: String, closure: @escaping (UIImage?) -> ()) {
+        guard let url = URL(string: urlString) else {
+            return closure(nil)
+        }
+        let task = URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
+            guard error == nil else {
+                print("error: \(String(describing: error))")
+                return closure(nil)
+            }
+            guard response != nil else {
+                print("no response")
+                return closure(nil)
+            }
+            guard data != nil else {
+                print("no data")
+                return closure(nil)
+            }
+            DispatchQueue.main.async {
+                closure(UIImage(data: data!))
+            }
+        }
+        task.resume()
     }
 }

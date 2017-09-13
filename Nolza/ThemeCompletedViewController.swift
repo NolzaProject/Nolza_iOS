@@ -22,7 +22,7 @@ class ThemeCompletedViewController: UIViewController {
 extension ThemeCompletedViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -45,8 +45,40 @@ class ThemeCompletedCell: UICollectionViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var nolzaAPI : NolzaAPI!
+    
+    var missions: [Mission] = []{
+        didSet{
+            var a = -3
+            for _ in 0..<3{
+                a += 3
+                makeArray(start: a, end: a+3)
+            }
+            sectionArray()
+            print(numberOfSection)
+            collectionView.reloadData()
+        }
+    }
+    var themeTitles: [String] = []{
+        didSet{
+            titleLabel.text = themeTitles[2]
+        }
+    }
+    
+    var numberOfSection: [Int] = []
+    
+    var themeModel: [[Mission]] = []
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        nolzaAPI = NolzaAPI.init(path: "/missions/category/default", method: .get, header: ["":""])
+        
+        nolzaAPI.getThemeMissions(themeTitle: { (titles) in
+            self.themeTitles = titles
+        }) { (missions) in
+            self.missions = missions
+        }
+        
         labelBackground.layer.masksToBounds = true
         labelBackground.layer.cornerRadius = 17
         
@@ -65,11 +97,25 @@ class ThemeCompletedCell: UICollectionViewCell {
         
     }
     
+    func sectionArray(){
+        numberOfSection = [3,3,3]
+    }
+    
+    func makeArray(start: Int, end: Int){
+        var arr : [Mission] = []
+        let start = start
+        let end = end
+        
+        for i in start..<end{
+            arr.append(missions[i])
+        }
+        themeModel.append(arr)
+    }
 }
 
 extension ThemeCompletedCell: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return numberOfSection.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -78,11 +124,43 @@ extension ThemeCompletedCell: UICollectionViewDataSource{
             return UICollectionViewCell()
         }
         
-        cell.missionImage.image = UIImage(named:"sky")
         cell.missionImage.layer.borderColor = #colorLiteral(red: 0.6078431373, green: 0.6078431373, blue: 0.6078431373, alpha: 1).cgColor
-        cell.number.text = "\(indexPath.item)"
-        cell.missionName.text = "Spicy fried Chicken"
+//        cell.missionImage.image = UIImage(named:"sky")
+//        cell.number.text = "\(indexPath.item)"
+//        cell.missionName.text = "Spicy fried Chicken"
+
+        getImageFromWeb(themeModel[2][indexPath.item].imageUrl ?? "") {
+            cell.missionImage.image = $0
+        }
+        cell.number.text = themeModel[2][indexPath.item].difficulty ?? ""
+        cell.missionName.text = themeModel[2][indexPath.item].title ?? ""
         
         return cell
+    }
+}
+
+extension ThemeCompletedCell {
+    func getImageFromWeb(_ urlString: String, closure: @escaping (UIImage?) -> ()) {
+        guard let url = URL(string: urlString) else {
+            return closure(nil)
+        }
+        let task = URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
+            guard error == nil else {
+                print("error: \(String(describing: error))")
+                return closure(nil)
+            }
+            guard response != nil else {
+                print("no response")
+                return closure(nil)
+            }
+            guard data != nil else {
+                print("no data")
+                return closure(nil)
+            }
+            DispatchQueue.main.async {
+                closure(UIImage(data: data!))
+            }
+        }
+        task.resume()
     }
 }
